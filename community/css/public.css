@@ -1,0 +1,459 @@
+/**
+ * @Author:	  by huangfahui
+ * @DateTime:	2015-09-28 16:29:02
+ * @Description: Description
+ */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #040404;
+  font: 400 12px/1.5 Microsoft YaHei, sans-serif;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  outline: 0;
+}
+li {
+  margin: 0;
+  list-style: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+.clear {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+.cl:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.cl {
+  zoom: 1;
+}
+.h20 {
+  height: 20px;
+}
+ul.list li {
+  margin: 0;
+  list-style: none;
+  line-height: 150%;
+}
+.red {
+  color: #f00;
+}
+.fll {
+  float: left;
+}
+.flr {
+  float: right;
+}
+.hide {
+  display: none;
+}
+.ov {
+  overflow: hidden;
+}
+.mau {
+  margin: 0 auto;
+}
+.por {
+  position: relative;
+}
+.poa {
+  position: absolute;
+}
+.pos {
+  position: static;
+}
+.center {
+  text-align: center;
+}
+
+
+/*qiandao*/
+.qd-box {
+  width: 1164px;
+  height: 112px;
+  background: url(http://www.wildstar.com.cn/images/v1/qd-bg.png) no-repeat scroll -12px 60px;
+  position: relative;
+  margin: 0 auto;
+  top: 722px;
+  z-index: 5;
+}
+.qd-box a.hover-shadow {
+  background: url(http://www.wildstar.com.cn/images/v1/qd.png) no-repeat scroll;
+  display: block;
+  width: 221px;
+  height: 90px;
+  margin: 0 auto;
+  top: 0px;
+  position: relative;
+}
+.yzm input {
+  background: url(http://www.wildstar.com.cn/images/v1/yzm-blue.png) no-repeat scroll;
+  width: 114px;
+  height: 35px;
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+  line-height: 35px;
+  display: block;
+  margin-left: 6px;
+  text-decoration: none;
+  color: #eff5f9;
+  -webkit-text-shadow: 0px 0px 8px;
+  -moz-text-shadow: 0px 0px 8px;
+  text-shadow: 0px 0px 8px;
+  border: none;
+}
+.red .yzm input {
+  background: url(http://www.wildstar.com.cn/images/v1/yzm-red.png) no-repeat scroll;
+}
+.slogan {
+  background: url(http://www.wildstar.com.cn/images/v1/slogan.png) no-repeat scroll;
+  position: absolute;
+  left: 10px;
+  top: 200px;
+  z-index: 50;
+  width: 410px;
+  height: 108px;
+}
+/*tanchucen*/
+.showbox {
+  width: 698px;
+  height: 482px;
+  display: none;
+  z-index: 1000;
+  top: 50%;
+  _top: 370px;
+  left: 50%;
+  position: fixed;
+  _position: absolute;
+}
+.blue {
+  background: url(http://www.wildstar.com.cn/images/v2/blue-ui-8.png) repeat-y scroll;
+}
+.tab-1 {
+  width: 600px;
+  height: auto;
+  margin: 30px auto 0;
+}
+.tab-1 tr td {
+  text-align: center;
+}
+.tab-1 tr td.tl {
+  text-align: left;
+}
+.w380 {
+  width: 380px;
+}
+.tab-1 tr.tr-1 {
+  height: 53px;
+}
+.tab-1 tr.tr-0 {
+  height: 60px;
+}
+.tab-1 tr.tr-0 td {
+  height: 60px;
+  color: #14deff;
+  font-size: 22px;
+  -webkit-text-shadow: 0px 0px 5px;
+  -moz-text-shadow: 0px 0px 5px;
+  text-shadow: 0px 0px 5px;
+  font-family: 'SimSun';
+  line-height: 60px;
+  font-weight: bold;
+}
+.tab-1 tr td.td-1 {
+  color: #bfd5e5;
+  font-size: 14px;
+  line-height: 24px;
+  text-indent: 2em;
+  -webkit-text-shadow: 0px 0px 5px;
+  -moz-text-shadow: 0px 0px 5px;
+  text-shadow: 0px 0px 5px;
+  text-align: left;
+  padding: 20px 0;
+}
+.text-bg {
+  background: url(http://www.wildstar.com.cn/images/v1/blue-ui-1.png) no-repeat scroll center;
+  height: 35px;
+}
+.text-bg span {
+  color: #eff5f9;
+  -webkit-text-shadow: 0px 0px 8px;
+  -moz-text-shadow: 0px 0px 8px;
+  text-shadow: 0px 0px 8px;
+  float: left;
+  margin-left: 34px;
+  margin-left: 44px\9;
+  line-height: 35px;
+}
+.text-bg input {
+  width: 180px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  color: #00fff6;
+  text-align: center;
+  background: none;
+  border: none;
+  float: right;
+  margin-right: 24px;
+}
+.text-bg input.selectbox {
+  width: 120px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  color: #00fff6;
+  text-align: center;
+  overflow: hidden;
+  border: none;
+  float: right;
+  margin-right: 62px;
+  background: url(http://www.wildstar.com.cn/images/v1/select.png) no-repeat scroll right center;
+  margin-right: 70px;
+  width: 100px;
+  position: relative;
+  cursor: pointer;
+}
+.selectbox ul {
+  width: 120px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.selectbox ul li {
+  height: 35px;
+  color: #00fff6;
+  width: 120px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+}
+.yzm {
+  width: 140px;
+}
+.ok {
+  background: url(http://www.wildstar.com.cn/images/v1/btn_ok_blue.png) no-repeat scroll;
+  width: 334px;
+  height: 43px;
+  display: block;
+}
+.ok:hover {
+  background: url(http://www.wildstar.com.cn/images/v1/btn_ok_blue2.png) no-repeat scroll;
+}
+.close {
+  background: url(http://www.wildstar.com.cn/images/v2/close_blue.png) no-repeat scroll;
+  width: 28px;
+  height: 28px;
+  display: block;
+  position: absolute;
+  right: -38px;
+  top: 0px;
+}
+a.close:hover {
+  background: url(http://www.wildstar.com.cn/images/v1/close_white.png) no-repeat scroll;
+}
+.red .close {
+  background: url(http://www.wildstar.com.cn/images/v2/close_red.png) no-repeat scroll;
+}
+.tab-1 tr td.sign_msg,
+.tab-2 tr td.text_sign.tab-2 tr td.sign_msg,
+.tab-1 tr td.text_sign {
+  text-align: left;
+  text-indent: 2em;
+}
+/*tab-2*/
+.tab-2 {
+  width: 600px;
+  height: 400px;
+  margin: 30px auto 0;
+}
+.tab-2 tr td {
+  text-align: center;
+  -webkit-text-shadow: 0px 0px 5px;
+  -moz-text-shadow: 0px 0px 5px;
+  text-shadow: 0px 0px 5px;
+  color: #bfd5e5;
+  font-size: 14px;
+  line-height: 24px;
+  height: 92px;
+}
+.tab-2 tr td em {
+  color: #fcff00;
+  text-decoration: underline;
+  padding: 0 4px;
+}
+.btn-1 a {
+  background: url(http://www.wildstar.com.cn/images/v1/btn_qd_blue.png) no-repeat scroll;
+  width: 334px;
+  height: 43px;
+  display: block;
+  margin: 0 auto;
+}
+.btn-2 a {
+  background: url(http://www.wildstar.com.cn/images/v1/blue-ui-4.png) no-repeat scroll;
+  width: 326px;
+  height: 35px;
+  display: block;
+  margin: 0 auto;
+}
+.btn-1 a:hover {
+  background: url(http://www.wildstar.com.cn/images/v1/btn_qd_blue2.png) no-repeat scroll;
+}
+.tab-2 tr td.sign_msg,
+.tab-3 tr td.sign_msg,
+.tab-1 tr td#text_sign {
+  text-indent: 2em;
+  text-align: left;
+}
+/**/
+.tab-3 {
+  height: 370px;
+  margin: 30px auto 0;
+}
+/*red*/
+.red {
+  background: url(http://www.wildstar.com.cn/images/v2/blue-ui-8.png) repeat-y scroll;
+}
+.red .tab-1 tr.tr-0 td {
+  color: #ff2828;
+}
+.red .tab-1 tr td.td-1,
+.red .text-bg span,
+.red .selectbox ul li,
+.red .tab-2 tr td,
+.red .text-bg input {
+  color: #f6c7c7;
+}
+.red {
+  background: url(http://www.wildstar.com.cn/images/v2/red-ui-8.png) repeat-y scroll;
+}
+.red .text-bg {
+  background: url(http://www.wildstar.com.cn/images/v1/red-ui-1.png) no-repeat scroll center;
+}
+.red .text-bg input.selectbox {
+  background: url(http://www.wildstar.com.cn/images/v1/red-select.png) no-repeat scroll right center;
+  margin-right: 78px;
+  width: 100px;
+}
+.red .yzm a {
+  background: url(http://www.wildstar.com.cn/images/v1/red-ui-3.png) no-repeat scroll;
+}
+.red .ok {
+  background: url(http://www.wildstar.com.cn/images/v1/btn_ok_red.png) no-repeat scroll;
+}
+.red .ok:hover {
+  background: url(http://www.wildstar.com.cn/images/v1/btn_ok_red2.png) no-repeat scroll;
+}
+.red .btn-2 a {
+  background: url(http://www.wildstar.com.cn/images/v1/red-ui-4.png) no-repeat scroll;
+}
+.red .btn-1 a {
+  background: url(http://www.wildstar.com.cn/images/v1/btn_qd_red.png) no-repeat scroll;
+}
+.red .btn-1 a:hover {
+  background: url(http://www.wildstar.com.cn/images/v1/btn_qd_red2.png) no-repeat scroll;
+}
+.text-title-bg {
+  background: url(http://www.wildstar.com.cn/images/v1/txt_blue.png) no-repeat scroll;
+  width: 334px;
+  height: 56px;
+  display: block;
+  margin: 0 auto;
+}
+.red .text-title-bg {
+  background: url(http://www.wildstar.com.cn/images/v1/txt_red.png) no-repeat scroll;
+}
+.text-qd-bg {
+  background: url(http://www.wildstar.com.cn/images/v1/txt_c_blue.png) no-repeat scroll;
+  width: 561px;
+  height: 48px;
+  margin: 0 auto;
+  display: block;
+}
+.red .text-qd-bg {
+  background: url(http://www.wildstar.com.cn/images/v1/txt_c_red.png) no-repeat scroll;
+}
+/*************footer************/
+.footer {
+  max-width: 2560px;
+  min-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+}
+.bottom {
+  width: 680px;
+  margin: 30px auto 10px;
+  position: relative;
+  height: auto;
+  background: url(http://wildstar.ztgame.com/images/v2/foot.png) no-repeat 0 23px;
+  padding: 16px 0 16px 310px;
+}
+.botp1 {
+  font-size: 12px;
+  line-height: 28px;
+  color: #fff;
+}
+.botp1 span {
+  font-size: 10px;
+}
+.footer-2 {
+  background: url(images/v2/foot-1.png) no-repeat scroll top left;
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.p-4 {
+  margin-left: 74px;
+  padding-left: 24px;
+  color: #fff;
+  line-height: 22px;
+  font-size: 14px;
+  background: url(images/v2/foot-2.png) no-repeat scroll left center;
+  margin-top: 24px;
+}
+.p-4 a {
+  margin-right: 40px;
+  text-decoration: none;
+  color: #fff;
+}
+.p-5 {
+  color: #fff;
+  line-height: 22px;
+  font-size: 14px;
+  padding-top: 10px;
+  margin-left: 76px;
+  padding-bottom: 30px;
+}
+
