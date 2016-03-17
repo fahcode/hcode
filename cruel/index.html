@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="full-screen" content="yes">
+	<meta name="browsermode" content="application">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <!-- 去掉iPhone下数字拨打号码 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 去掉移动端浏览器会在超链接元素被触摸（tap）的时候显示一个半透明的高亮背景 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置iphone下头部样式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 删除默认的苹果工具栏和菜单栏。 -->
+    <title>暴虐策划逼改版_《绿色征途》年度最大版本更新</title>
+    <meta name="description" content="非RMB玩家首选网游《绿色征途》最新资料片“九鼎争霸”震撼开启！本次资料片重磅推出神秘地域“圣城”，玩家通过“九鼎”的收集和争夺，开启“圣城”，并展开令人血脉贲张的全新战斗“九鼎争霸”！此外，“神之战场”、“小伙伴集结”等一系列刺激、好玩的新玩法，将为玩家带来钱财、道具、经验及快感！">
+    <meta name="keywords" content="绿色征途,九鼎争霸,绿色征途官网,免费游戏,网络游戏,征途2,lszt,网游,免费网游,武侠网游,武侠游戏,经典网游,巨人网络,绿色征途客户端下载,绿色征途客户端,官方网站,游戏官网,绿色征途官方网站">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="http://cdn1.zygames.com/qqsm/img/favicon.ico"> -->
+    <link rel="stylesheet" href="css/animation.min.css">
+    <link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<!--<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>-->
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="music" id="thisMusic">
+		<a class="musicBtn doScale" href="javascript:;">
+			<audio id="audio" src="music/m.mp3" preload="preload" ></audio>
+			<audio id="audioBg" src="music/bg.mp3" preload="preload" autoplay="autoplay" loop="loop"></audio>
+		</a>
+	</div>
+	<div class="loading" id="loading">
+		<div class="loadBox">
+			<div class="loadingCon ct">
+				<div class="loadingAnim">
+					<img src="img/load.gif" alt="">
+					<!-- <div class="LA anim1"><img src="img/anim_load/anim_load1.png" alt=""></div>
+					<div class="LA anim2"><img src="img/anim_load/anim_load4.png" alt=""></div>
+					<div class="LA anim3"><img src="img/anim_load/anim_load3.png" alt=""></div>
+					<div class="LA anim4"><img src="img/anim_load/anim_load4.png" alt=""></div> -->
+				</div>
+				<div class="loadingPlan doScale">
+					<div class="planBg">
+						<div class="planHv" id="planWid">
+							<div class="show"></div>
+						</div>
+					</div>	
+				</div>
+				<div class="loadingNum">
+					<div class="abox doScale">
+					<img src="img/load_txt.png" alt="" class="planTxt">
+					<span class="planNum" id="planValue">0%</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 分享弹窗层 -->
+	<div class="pop shareDiv" >
+		<div class="popOpcaty"></div>
+		<div class="shareImg"><img class="" src="img/shareImg.png" alt=""></div>
+	</div>
+	<!-- 礼包弹窗层 -->
+	<div class="pop getPack" >
+		<div class="popOpcaty"></div>
+		<div class="getPack_bg">
+			<img src="img/getPack_bg.png" alt="" class="imgBg">
+			<div class="close doScale"></div>
+			<div class="packMain">
+				<div class="h4"><img src="img/getPack_tit1.png" alt=""></div>
+				<div class="txt1 ct">
+					<div class="tf doScale">您已获得88颗精致升级宝石</div>
+				</div>
+				<div class="codeTxt"><span>d43334r4h34ue54ese54dssd</span></div>
+				<div class="giftImg"><img src="img/gift.png" alt=""></div>
+				<div class="txt2 ct">
+					<div class="txtBox">
+						<p>备注</p>
+						<p>1、验证码每个账号仅可使用一次；</p>
+						<p>2、验证码具有时效性，请尽快登录游戏，<br><span class="nb">1、</span>找到NPC兑换领取<span class="sr">88颗精致升级宝石</span>。</p>
+					</div>
+				</div>		
+			</div>
+		</div>		
+	</div>
+	<div class="main">
+		<header>
+			<div class="logo"></div>
+			<div class="text"></div>
+		</header>
+		<div class="content" id="touchBox">
+			
+			<div class="row" id="gameStart">
+				<div id="column1">
+					<div class="slg slgTips"><img src="img/slg1.gif" alt=""></div>
+					<div class="txtFigure">
+						<div class="txt"><img src="img/txt1.png" alt="" class="txt1"></div>
+						<div class="Figure">
+							<img src="img/Figure.gif" alt="" class="figureImg">
+						</div>
+					</div>
+					<div class="foot">
+						<img src="img/foot.png" />
+						<!-- 上滑提示 -->
+						<div class="upIcon doScale touchdown"></div>
+						<div class="LT"></div>
+						<div class="RT"></div>
+					</div>
+				</div>
+				<div id="column2">
+					<div class="lightBg"></div>
+					<div class="logo"><img class="logoImg" src="img/logo.png" alt=""></div>
+					<div class="slg2 bounceInTB"><img src="img/slg2.gif" alt=""></div>
+					<div class="txtImg">
+						<img src="img/Figure2.png" alt="">
+						<div class="txtp"><img src="img/txt2.png" alt=""></div>
+					</div>
+					<div class="txt ct">
+						<div class="txtBox doScale">分享邀请好友一同虐策划逼改版，领分享礼包</div></div>
+					<div class="shareBtn bounce">
+						<a href="javascript:;" title="领分享礼包" id="shareBtn" class="">
+						<img src="img/shareBtn.png" alt="" class="imgBtn">
+						</a>
+					</div>
+					<div class="foot">
+						<img src="img/foot_again.png" />
+						<!-- 上滑提示 -->
+						<div class="upIcon doScale"></div>
+						<div class="LT"></div>
+						<div class="RT"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row whip" id="doPlay">
+				<!--探照灯-->
+				<div class="stage lightMove">
+				</div>
+				<!--type切换-->
+				<div class="cProp" id="cProp">
+					<div class="anim1 all">
+						<div class="zz"></div>
+						<div class="imgbg"></div>
+					</div>
+					<div class="anim2 all">
+						<div class="zz"></div>
+						<div class="imgbg"></div>
+					</div>
+					<div class="anim3 all">
+						<div class="zz"></div>
+						<div class="imgbg"></div>
+					</div>
+					<div class="anim4 all">
+						<div class="zz"></div>
+						<div class="imgbg"></div>
+					</div>
+				</div>
+				<!--动态添加效果-->
+				<div class="addAnim" id="addAnim">
+					<div class="anim1 all"></div>
+					<div class="anim2 all"></div>
+					<div class="anim3 all"></div>
+					<div class="anim4 all"></div>
+					<div class="anim5 all"></div>
+				</div>
+				<!--say文字-->
+				<div class="say say1" id="sayControl">
+					<div class="sayImg sayImg1"><img src="img/animsay/loadSay1.png" alt=""></div>
+					<div class="sayImg sayImg2"><img src="img/animsay/loadSay2.png" alt=""></div>
+					<div class="sayImg sayImg3"><img src="img/animsay/say1_l.png" alt=""></div>
+					<div class="sayImg sayImg4"><img src="img/animsay/say1_r.png" alt=""></div>
+					<div class="sayImg sayImg5"><img src="img/animsay/say2_l.png" alt=""></div>
+					<div class="sayImg sayImg6"><img src="img/animsay/say2_r.png" alt=""></div>
+					<div class="sayImg sayImg7"><img src="img/animsay/say3_l.png" alt=""></div>
+					<div class="sayImg sayImg8"><img src="img/animsay/say3_r.png" alt=""></div>
+					<div class="sayImg sayImg9"><img src="img/animsay/say4_l.png" alt=""></div>
+					<div class="sayImg sayImg10"><img src="img/animsay/say4_r.png" alt=""></div>
+					<div class="sayImg sayImg11"><img src="img/animsay/say5_l.png" alt=""></div>
+					<div class="sayImg sayImg12"><img src="img/animsay/say5_r.png" alt=""></div>
+				</div>
+				<div class="hp ct">
+					<div class="palnBox doScale">
+						<div class="lf"></div>
+						<div class="palnOld">
+							<div class="palnNew" id="HPPV">
+								<div class="hvPlan"></div>
+
+							</div>
+							<div class="planvalue"><span id="HPV">100</span>/100</div>
+						</div>
+					</div>
+				</div>
+				<!-- 人物动画 -->
+				<div class="play" id="play">
+					<div class="playBox">
+						<!--body-->
+						<div class="body" id="allBody">
+							<img src="img/body/bodyW.png" class="bodyW">
+							<div class="part">
+								<div class="hand hand1" id="handControl">
+									<img class="imgHead1" src="img/hand/hand1.png" >
+									<img class="imgHead2" src="img/hand/hand2.png" >
+									<img class="imgHead3" src="img/hand/hand3.png" >
+								</div>
+								<div class="bodyT">
+									<img src="img/body/bodyT.png" >
+								</div>
+								<div class="bodyD bodyD1" id="bodyD">
+									<img class="imgBodyD1" src="img/body/bodyD1.png" >
+									<img class="imgBodyD2" src="img/body/bodyD2.png" >
+									<img class="imgBodyD3" src="img/body/bodyD3.png" >
+									<div id="playDiv"></div>
+								</div>
+							</div>
+						</div>
+						<!--feel-->
+						<div class="feel" id="feelControl">
+							<img class="anifeel buzz-out-b imgFeel1" src="img/animfeel/feel1.png" >
+							<img class="anifeel buzz-out-b imgFeel2" src="img/animfeel/feel2.png" >
+							<img class="anifeel imgFeel3" src="img/animfeel/feel3.png" >
+						</div>
+						<!--head-->
+						<div class="head head1" id="headControl">
+							<img class="imgHead1" src="img/head/head1.png" >
+							<img class="imgHead2" src="img/head/head2.png" >
+							<img class="imgHead3" src="img/head/head3.png" >
+							<img class="imgHead4" src="img/head/head4.png" >
+							<img class="imgHead5" src="img/head/head5.png" >
+							<img class="imgHead6" src="img/head/head6.png" >
+							<img class="imgHead7" src="img/head/head7.png" >
+						</div>
+					</div>
+				</div>
+				<!-- 控制按钮 -->
+				<div class="btPlay" id="btPlay">
+					<img class="desk" src="img/desk.png"/>
+					<div class="txt doScale">选择刑具开始暴虐策划</div>
+					<div class="btnList">
+						<div class="btnItem" id="whip"><a href="javascript:;" title="皮鞭"><img src="img/play/btn1.png" alt=""></a>
+						</div>
+						<div class="btnItem" id="candle"><a href="javascript:;" title="蜡烛"><img src="img/play/btn2.png" alt=""></a></div>
+						<div class="btnItem" id="nunchaku"><a href="javascript:;" title="双节棍"><img src="img/play/btn3.png" alt=""></a></div>
+						<div class="btnItem" id="stick"><a href="javascript:;" title="木棒"><img src="img/play/btn4.png" alt=""></a></div>
+					</div>
+				</div>
+				<div class="touchPlay" id="touchPlay">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script src="http://sapi.ztgame.com/site/js/require.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var ImgArr = ['img/load_bg.jpg','img/load.gif','img/music_btn.png','img/load_plan_hv.png','img/load_plan.png','img/load_txt.png','img/foot.png','img/foot_again.png','img/slg1.gif','img/slg2.gif','img/weixinlogo.jpg','img/Figure.gif','img/Figure2.png','img/txt1.png','img/txt2.png','img/close.png','img/desk.png','img/getPack_bg.png','img/getPack_tit1.png','img/gift.png','img/hp.png','img/logo.png','img/shareImg.png','img/stage.png','img/animfeel/feel1.png','img/animfeel/feel2.png','img/animfeel/feel3.png','img/animsay/loadSay1.png','img/animsay/loadSay2.png','img/animsay/say1_l.png','img/animsay/say1_r.png','img/animsay/say2_l.png','img/animsay/say2_r.png','img/animsay/say3_l.png','img/animsay/say3_r.png','img/animsay/say4_l.png','img/animsay/say4_r.png','img/animsay/say5_l.png','img/animsay/say5_r.png','img/body/bodyT.png','img/body/bodyW.png','img/hand/hand1.png','img/hand/hand2.png','img/hand/hand3.png','img/head/head1.png','img/head/head2.png','img/head/head3.png','img/head/head4.png','img/head/head5.png','img/head/head6.png','img/head/head7.png','img/play/btn1.png','img/play/btn2.png','img/play/btn3.png','img/play/btn4.png','img/prop/prop1.png','img/prop/prop2.png','img/prop/prop3.png','img/prop/prop4.png','img/addAnim/anim1.png','img/addAnim/prop1.png','img/addAnim/prop2.png','img/addAnim/prop3.png','img/addAnim/prop4.png','img/lightBg.png'];
+		cruels.loadImg('loading',ImgArr);
+		//设置宽高
+		cruels.getWidth();
+		//音乐按钮控制，不播放音乐（1则播放）
+		cruels.doMusics(0);
+		//翻页控制
+		cruels.TouchPage('gameStart','row');
+		//页面按钮逻辑控制
+		cruels.btnLogic();
+		
+	});
+	//微信分享
+	function weixinShare(){
+		//分享成功后调用
+		function shareSuccess(){
+            $.post('./action.php',{'a':'getCard'},function(rp){
+                if(rp.code == 0){
+                    alert(rp.msg);
+                    return false;
+                }
+                if(rp.code == 1){
+                    $("#showCard").html(rp.card);
+                    $('.shareDiv').hide();
+                    $('.getPack').show();
+                }
+            },'json');
+		}
+
+		requirejs(["weixin/main"], function(weixin){
+			//与当前域名、公共号对应的appid，必须有效。
+			var appid = 'wxefefae06f7bfb308';
+			//wx对像就基本等同于官方的weixin对像，包含所有官网api
+			var wx = new weixin(appid,function(){
+				//朋友圈
+				wx.onMenuShareTimeline({
+				    title: '什么地方不爽？说，我揍他揍到改为止！ ', // 分享标题
+				    link: 'http://act.ls.ztgame.com/cruel/index.html', // 分享链接
+				    imgUrl: 'http://act.ls.ztgame.com/cruel/img/weixinlogo.jpg', // 分享图标
+				    success: function () { 
+				        // 用户确认分享后执行的回调函数
+				        shareSuccess();
+				    },
+				    cancel: function () { 
+				    }
+				});
+				//朋友
+				wx.onMenuShareAppMessage({
+				    title: '什么地方不爽？说，我揍他揍到改为止！ ', // 分享标题
+				    desc: '有怨报怨有仇报仇！被坑这么久，今天来出气！快来和我一起暴打《绿色征途》策划，叫他坑叫他坑~~~还有88个精致升级宝石拿！', // 分享描述
+				    link: 'http://act.ls.ztgame.com/cruel/index.html', // 分享链接
+				    imgUrl: 'http://act.ls.ztgame.com/cruel/img/weixinlogo.jpg', // 分享图标
+				    type: 'link', // 分享类型,music、video或link，不填默认为link
+				    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+				    success: function () { 
+				        // 用户确认分享后执行的回调函数
+				        shareSuccess();
+				    },
+				    cancel: function () { 
+				    }
+				});
+			});
+		});
+	};
+</script>
+</body>
+</html>

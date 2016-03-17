@@ -1,0 +1,285 @@
+
+
+/*中心旋转*/
+@keyframes centerRotate{
+    100%{transform: rotate(360deg);transform-origin:50% 50%;}
+}
+@keyframes McenterRotate{
+    0%{transform:rotate(0deg) scale(0.6,0.6);}
+    100%{transform:rotate(360deg) scale(0.6,0.6);transform-origin:50% 50%;}
+}
+
+/*上滑提示*/
+@keyframes touchdown{
+    0%{opacity: 1;}
+    100%{top:45%;opacity: 0;}
+}
+
+
+/*扫描上下移动效果*/
+@keyframes upDown{
+    25%{top:170px;}
+    50%{top:0px;}
+    75%{top:-170px;}
+    100%{top:0px;}
+}
+
+/*上下隐藏*/
+@keyframes openup{
+    100%{height:0px;visibility: hidden;}
+}
+@-webkit-keyframes openup{
+    100%{height:0px;visibility: hidden;}
+}
+@-o-keyframes openup{
+  100%{height:0px;visibility: hidden;}
+}
+@-moz-keyframes openup{
+  100%{height:0px;visibility: hidden;}
+}
+
+/*向下关闭*/
+@keyframes opendown{
+    100%{height:0px;visibility: hidden;}
+}
+@-webkit-keyframes opendown{
+    100%{height:0px;visibility: hidden;}
+}
+@-o-keyframes opendown{
+  100%{height:0px;visibility: hidden;}
+}
+@-moz-keyframes opendown{
+  100%{height:0px;visibility: hidden;}
+}
+/* 3d向上翻 */
+@keyframes rollTop{
+    0%{transform: rotateX(90deg);opacity:0;}
+  100%{transform: rotateX(0deg);opacity:1;}
+}
+
+@keyframes rollLeft{
+  80%{transform: rotateY(0deg);opacity:1;}
+  90%{transform: rotateY(-10deg);opacity:1;}
+  100%{transform: rotateY(0deg);opacity:1;}
+}
+@-webkit-keyframes rollLeft{
+  100%{-webkit-transform: rotateY(0deg);opacity:1;}
+}
+
+/*探照灯效果*/
+@keyframes lightMove{
+    0%{transform: translate3d(0,2%,0) scale(1,1);visibility:visible;}
+    30%{transform: translate3d(0,0%,0) scale(1.5,1.5);}
+    40%{transform: translate3d(40%,40%,0) scale(2,2);}
+    50%{transform: translate3d(0,50%,0) scale(2,2);}
+    60%{transform: translate3d(-40%,0,0%) scale(2,2);}
+    70%{transform: translate3d(0,0%,0%) scale(1,1);}
+    99%{transform: translate3d(0,200%,0) scale(20,20);z-index:997;}
+    100%{visibility: hidden;transform: translate3d(0,200%,0) scale(20,20);z-index:10;}
+}
+
+@keyframes slgTips{
+  0%{transform:translate3d(0,-200%,0) scale(0.8);visibility:visible;opacity: 0;}
+  40%{transform:translate3d(0,0%,0) scale(0.8);}
+  50%{transform: scale(1.2);opacity:1;} 
+  58% {transform:scale(1);}
+  65% {transform:rotate(12deg) scale(1);}
+  70% {transform:rotate(-12deg);}
+  75% {transform:rotate(10deg);}
+  80% {transform:rotate(-8deg);}
+  85% {transform:rotate(5deg);}
+  95% {transform:rotate(-2deg);}
+  100% {transform:rotate(0deg);visibility:visible;}
+}
+@keyframes bounce{
+  from, 5%, 13%, 21%,25%,to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  10%, 11% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  17% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  22% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+
+/* 颤抖效果 */
+@keyframes buzz-out{
+  0% {transform: translateX(3px) rotate(2deg);}
+  100% {transform: translateX(-3px) rotate(-2deg);}
+}
+@keyframes buzz-out-b{
+  0% {transform: translateX(6px) rotate(4deg);}
+  100% {transform: translateX(-6px) rotate(-4deg);}
+}
+
+/*左倾斜*/
+@keyframes left-hand{100%{transform:skewX(40deg);}}
+@keyframes left-bodyT{100%{transform:skewX(-20deg);}}
+@keyframes left-bodyD{100%{transform:skewX(20deg);}}
+
+/*左右倾斜*/
+@keyframes right-hand{50%{transform:skewX(-30deg)}100%{transform:skewX(30deg);}}
+@keyframes right-bodyT{50%{transform:skewX(15deg)}100%{transform:skewX(-15deg);}}
+@keyframes right-bodyD{50%{transform:skewX(-15deg)}100%{transform:skewX(15deg);}}
+
+/*左右倾斜*/
+@keyframes right-hand-big{50%{transform:skewX(-40deg)}100%{transform:skewX(30deg);}}
+@keyframes right-bodyT-big{50%{transform:skewX(20deg)}100%{transform:skewX(-20deg);}}
+@keyframes right-bodyD-big{50%{transform:skewX(-20deg)}100%{transform:skewX(20deg);}}
+
+/* 突然放大 */
+@keyframes scale-bg{0%{transform:scale3d(0.1,0.1,0.1)}90%{transform:scale3d(0.2,0.2,0.1)}100%{transform:scale3d(1.2,1.2,1)}}
+
+/* 偏头效果 */
+@keyframes rotateHeadZ{0%{transform:rotateZ(15deg) translateX(40px)}90%{transform:rotateZ(10deg) translateX(40px)}100%{transform:rotateZ(0deg) translateX(40px)}}
+@keyframes rotateHeadX{0%{transform:rotateX(20deg)}90%{transform:rotateX(10deg)}100%{transform:rotateX(0deg)}}
+@keyframes rotateHeadY{0%{transform:rotateY(30deg)}90%{transform:rotateY(25deg)}100%{transform:rotateY(0deg)}}
+@keyframes rotateHeadYZ{0%{transform:rotateY(30deg) rotateZ(30deg) translate(40px,-10px);}90%{transform:rotateY(25deg) rotateZ(25deg) translate(40px,-10px)}100%{transform:rotateY(0deg) rotateZ(0deg) translate(40px,-10px)}}
+
+
+/* 文字出现动画 */
+@keyframes showTopBottom{
+  0%{transform:translateY(-20px);opacity: 0;}
+  100%{transform:translateY(0px);opacity: 1;}
+}
+
+@keyframes showLeftRight{
+  0%{transform:translate3d(-100%,0,0);opacity: 0;}
+  100%{transform:translate3d(0,0,0);opacity: 1;}
+}
+
+@keyframes showRightLeft{
+  0%{transform:translate3d(100%,0,0);opacity: 0;visibility: visible;}
+  90%{transform:translate3d(0,0,0);opacity: 1;}
+  100%{transform:translate3d(0,0,0);opacity: 0;visibility: hidden;}
+}
+
+
+@keyframes showBig{
+  0%{transform:scale3d(1,1,1);opacity: 0;}
+  30%{transform:scale3d(1.25,.75,1);opacity: 1;}
+  40%{transform:scale3d(0.75,1.25,1)}
+  50%{transform:scale3d(1.15,.85,1)}
+  65%{transform:scale3d(.95,1.05,1)}
+  75%{transform:scale3d(1.05,.95,1)}
+  100%{transform:scale3d(1,1,1);opacity: 1;}
+}
+
+/* 文字从上向下放大 */
+@keyframes pullBottom{
+  0%{transform-origin: 50% 0;transform:scale3d(1,0.3,1);opacity: 0;}
+  100%{transform-origin: 50% 0;transform:scale3d(1,1,1);opacity: 1;}
+}
+
+/*从上到下，后放大*/
+@keyframes topBottomBig{
+  0%{transform:translate3d(0,-400px,0) scale3d(0.4,0.4,0.4);opacity: 0.8;}
+  80%{transform:translate3d(0,-20px,0) scale3d(0.4,0.4,0.4);opacity: 1;}
+  100%{transform:translate3d(0,0px,0) scale3d(1,1,1);opacity: 1;}
+}
+
+/*文字放大旋转后缩小*/
+@keyframes flip{
+  0%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-360deg);-webkit-animation-timing-function:ease-out;opacity: 1;}
+  40%{-webkit-transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-190deg);-webkit-animation-timing-function:ease-out}
+  50%{-webkit-transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-170deg);-webkit-animation-timing-function:ease-in}
+  80%{-webkit-transform:perspective(400px) scale3d(.95,.95,.95);-webkit-animation-timing-function:ease-in}
+  100%{-webkit-transform:perspective(400px);-webkit-animation-timing-function:ease-in;opacity: 1;}
+}
+
+/*拉伸*/
+@keyframes stretch{
+  0%{-webkit-transform:scale3d(1,1,1);opacity: 1;visibility: visible;}
+  30%{-webkit-transform:scale3d(1.25,.75,1)}
+  40%{-webkit-transform:scale3d(0.75,1.25,1)}
+  50%{-webkit-transform:scale3d(1.15,.85,1)}
+  65%{-webkit-transform:scale3d(.95,1.05,1)}
+  75%{-webkit-transform:scale3d(1.05,.95,1)}
+  100%{-webkit-transform:scale3d(1,1,1);opacity: 1;}
+}
+
+/*右下弹性出来*/
+@keyframes bounceInTR{
+  0%{transform: translate3d(100%,-150%,0);opacity: 0;visibility: visible;}
+  40%{transform: translate3d(-10%,10%,0);opacity: 1;}
+  55%{transform:translate3d(4%,-4%,0)}
+  70%{transform:translate3d(-4%,4%,0)}
+  85%{transform:translate3d(2%,-2%,0);opacity:1;}
+  100%{opacity:0;transform:none;visibility: hidden;}
+
+}
+
+/*上下弹性出来*/
+@keyframes bounceInTB{
+  0%{transform: translate3d(0%,-200%,0);opacity: 0;visibility: visible;}
+  50%{transform: translate3d(0%,10%,0);opacity: 1;}
+  60%{transform:translate3d(0%,-10%,0)}
+  70%{transform:translate3d(0%,0%,0)}
+  80%{transform:translate3d(0%,-5%,0);opacity:1;}
+  90%{transform:translate3d(0%,3%,0);opacity:1;}
+  100%{opacity:1;transform:none;visibility: visible;}
+}
+
+@keyframes showBottomTop{
+  0%{transform: translate3d(0%,100%,0);opacity: 0;visibility: visible;}
+  40%{transform: translate3d(0%,-20%,0);opacity: 1;}
+  50%{transform:translate3d(0%,0%,0)}
+  60%{transform:translate3d(0%,-15%,0)}
+  70%{transform:translate3d(0%,0%,0)}
+  80%{transform:translate3d(0%,-10%,0)}
+  90%{transform:translate3d(0%,0%,0);opacity:1;}
+  95%{transform:translate3d(0%,-5%,0);opacity:1;}
+  100%{opacity:1;transform:none;visibility: visible;}
+}
+
+@keyframes leftRoll{
+  100%{transform: rotateZ(0deg);opacity: 1;}
+}
+@keyframes rightRoll{
+  100%{transform: rotateZ(0deg);opacity: 1;}
+}
+
+@keyframes rollTopHide{
+  50%{transform:scale3d(1,1,1);opacity:1;}
+  55%{transform:scale3d(1,1.2,1);opacity:1;}
+  60%{transform:scale3d(1,1,1);opacity:1;}
+  100%{opacity: 0;}
+}
+
+
+@keyframes scales{
+    0%{transform:scale3d(1,1,1);}
+    25%{transform:scale3d(1.2,1.2,1.2);opacity: 1;}
+    50%{transform:scale3d(0.9,0.9,0.9);}
+    75%{transform:scale3d(1.1,1.1,1.1);}
+    100%{transform:scale3d(1,1,1);opacity: 1;}
+}
+
+
+
+@keyframes loading{
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+@-webkit-keyframes loading{
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+
+@keyframes fadeIn{0%{opacity: 0;visibility: visible;}10%{opacity: 1;}90%{opacity: 1;}100%{opacity: 0;visibility: hidden;}}
+@keyframes sayShow{0%{opacity: 0;visibility: visible;}10%{opacity: 1;}90%{opacity: 1;}100%{opacity: 0;visibility: hidden;}}
+
+
+@keyframes fadeInUp{0%{opacity: 0;transform: translate3d(0, 100%, 0);-webkit-transform: translate3d(0, 100%, 0);}100%{opacity: 1;transform: none;-webkit-transform: none;}}

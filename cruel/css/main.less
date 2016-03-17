@@ -1,0 +1,311 @@
+/**
+ * @Author:	  by huangfahui
+ * @DateTime:	2015-10-19 17:29:02
+ * @Description: Description
+ */
+
+*{margin:0;padding:0;border:0;outline: 0;}
+html{font-size: 18px;height: 100%;}//12 0.75,14 0.875,18 1.125,20 1.25;
+body{position: relative;width:100%;height: 100%;zoom:1;font:400 1rem/1.5 Microsoft YaHei, Arial, sans-serif;color: #000;text-size-adjust: 100%;text-rendering: optimizelegibility;}
+img{vertical-align: middle;}
+ul,li,dt,dl,ol{list-style: none;}
+a,a:hover{text-decoration: none;color: #000;-webkit-tap-highlight-color:rgba(0,0,0,0);}//只用于iOS,可点击元素设置背景
+
+.ct:after{content: ',';clear: both;width: 1px;height:1px;visibility:hidden;}
+
+
+//css3过渡效果
+.loadTransition{transition: all linear 0.3s;}
+.touchTransition{transition: all linear 0.3s;}
+
+.animation(@name,@duration,@ease:ease,@count:1,@delay:0s,@mode:none,@direction:normal,@state:running){
+	animation-name: @name;//动画名字
+	animation-duration: @duration;//动画时间
+	animation-timing-function: @ease;//动画曲线
+	animation-delay: @delay;//开始时间
+	animation-iteration-count: @count;//播放次数
+	animation-fill-mode:@mode;	//向前和向后填充模式都被应用。
+	animation-direction: @direction;//是否下周期逆向地播放
+	animation-play-state: @state;//动画是否正在运行或暂停
+	/* Safari and Chrome: */
+	-webkit-animation-name: @name;
+	-webkit-animation-duration: @duration;
+	-webkit-animation-timing-function: @ease;
+	-webkit-animation-delay: @delay;
+	-webkit-animation-iteration-count: @count;
+	-webkit-animation-fill-mode:@mode;
+	-webkit-animation-direction: @direction;
+	-webkit-animation-play-state: @state;
+}
+body{}
+.bg{background:url('../img/load_bg.jpg') center center;background-size:cover;}
+.container{width: 100%;max-width: 640px;position:relative;margin:0 auto;height: 100%;.bg;}
+.music{position: absolute;top:0.8rem;width: 65px;height: 50px;right:0;z-index: 992;
+	.musicBtn{display:block;width: 65px;height: 50px;background: url('../img/music_btn.png') no-repeat 0px -70px;position: absolute;top:0;right:0;}
+	.off{background-position: 0 0;}
+}
+
+.loading{position: absolute;z-index: 10;width: 100%;height:100%;
+	.loadBox{width: 100%;height:100%;.bg;}
+	.loadingCon{position: absolute;width:78%;left: 50%;top:40%;margin-left:-39%;}
+	.loadingAnim{width:100%;overflow: hidden;
+		.LA{float: left;width: 25%;overflow: hidden;}
+		img{width: 100%;height:auto;}
+	}
+	.loadingPlan{width:494px;height:25px;overflow: hidden;position: relative;margin-left: -247px;top:0.5rem;left:50%;
+		.planBg{width: 100%;height: 100%;float: left;background:url('../img/load_plan.png') no-repeat 0 0;background-size:100% 100%;}
+		.planHv{width:0%;height: 100%;.loadTransition;overflow: hidden;}
+		.show{width:494px;height: 100%;background:url('../img/load_plan_hv.png') no-repeat 0 0;background-size: 100% 100%;}
+	}
+	.loadingNum{text-align: center;width: 100%;overflow: hidden;vertical-align: middle;margin-top:1rem;
+		.abox{width: 290px;height:27px;line-height:27px;position: relative;top:0;left:50%;margin-left: -145px;}
+		.planTxt{width: 198px;height:27px;float: left;}
+		.planNum{position:absolute;font-size: 30px;font-weight: bold;top:0;right:0px;}
+	}
+}
+
+//弹窗公共样式
+.pop{position: absolute;top:0;left:0;width:100%;height:100%;z-index:999;display: none;
+	.popOpcaty{position: absolute;top:0;left:0;width:100%;height:100%;z-index:2;background: #000;opacity: 0.8;}
+}
+//分享弹窗层
+.shareDiv{
+	.shareImg{width: 100%;height:100%;position:absolute;z-index:10;top:0;left:0;img{width: 100%;}}
+}
+//礼包弹窗层
+.getPack{
+	.getPack_bg{position:relative;z-index:10;width: 89.2%;padding:10px;margin:20% auto 0 auto;overflow:hidden;
+		img{width: 100%;}
+	}
+	.close{position: absolute;width: 76px;height: 73px;top:-10px;right:-10px;background: url('../img/close.png') no-repeat;z-index: 90;}
+	.packMain{position: absolute;padding:10px;z-index: 50;top:0;left:0;bottom:0;right:0;
+		.tf{width:640px;position: absolute;top:0;left: 50%;margin-left:-320px;}
+
+		.h4{width: 43.2%;overflow: hidden;margin:3rem auto 0;}
+		.txt1{position:relative;width:100%;font-size: 32px;line-height: 2.5rem;color:#000;text-align: center;margin-top: 3%;font-weight: bold;}
+		.codeTxt{text-align: center;width: 100%;overflow: hidden;margin:3% auto 0.6rem;
+			span{color:#cc0000;font-size: 1.4rem;padding: 0.5rem;background-color: #e9d8c9;}
+		}
+		.giftImg{width: 58%;overflow: hidden;margin:0.8rem auto 0;}
+		.txt2{width: 100%;margin:0px auto 0;position: relative;
+			.txtBox{width: 85%;margin:0 auto;}
+			p{width:100%;font-size: 1rem;color:#3c1700;line-height: 1.6rem;margin:0.5rem auto 0;font-weight: bold;}
+			.nb{visibility: hidden;}
+			.sr{color:#cc0000;}
+		}
+	}
+}
+
+
+
+.main{width: 100%;height: 100%;overflow:hidden;position: relative;z-index:50;display: none;transform-style: preserve-3d;-webkit-perspective:800px;perspective:800px;-webkit-perspective-origin:50% 50%;perspective-origin:50% 50%;}
+header{}
+.foot{position: absolute;width: 100%;bottom:2%;left:0;
+	img{width:100%;height: auto;}
+	.upIcon{width: 71px;height:71px;position: absolute;z-index: 90;top:65%;left:50%;margin:-35px 0 0 -35px;background:url('../img/up.png') no-repeat center center;background-size: cover;}
+}
+
+//设置翻页滑动过渡
+.ani-marTop{.touchTransition;}
+.content{position:absolute;width: 100%;top:0;left:0;overflow: hidden;
+
+	.row{width: 100%;height: 100%;position:relative;float: left;img{width:100%;}}
+	#column1{width: 100%;height: 100%;
+		.slg{width: 93%;margin:20% auto 0 auto;transform-origin: bottom;visibility: hidden;}
+		.txtFigure{width: 100%;margin:0 auto;position: relative;
+			.txt{width: 68%;margin:0 auto;overflow: hidden;}
+			.Figure{position: absolute;width:34%;top:8%;right:10%;z-index: 10;}
+		}
+	}
+	#column2{float:left;width: 100%;height: 100%;display: none;
+		.lightBg{width: 100%;height: 100%;background:url('../img/lightBg.png') no-repeat 0 top;background-size:100% auto;position: absolute;top:0;left:0;z-index: 0;}
+		.logo{width:37.7%;overflow:hidden;margin:3% auto 0 auto;}
+		.slg2{width: 89.5%;overflow:hidden;margin:-8% auto 0 auto;position: relative;z-index: 100;}
+		.txtImg{width: 25.9%;margin:0 0 0 25%;position: relative;
+			.txtp{width:150%;position: absolute;top:30%;right:-120%;}
+		}
+		.txt{width: 100%;position:relative;margin:2% auto 0;padding-bottom: 0rem;line-height: 1.2rem;
+			.txtBox{position: absolute;width: 640px;top:0;left:50%;margin-left:-320px;text-align: center;font-size: 24px;color:#242424;}
+		}
+		.shareBtn{width: 74.7%;overflow:hidden;margin:3% auto 0 auto;}
+	}
+	#doPlay{
+		.stage{width: 100%;height: 100%;background: url('../img/stage.png') no-repeat 0px 0px;background-size: cover;position: absolute;top:0;left:0;z-index:997;transform-origin: 50% 50%;
+		}
+		.addAnim{height: 0;width: 100%;
+			.all{position: absolute;z-index: 1000;width: 98px;height: 44px;top:60%;left: 50%;margin: -22px 0 0 -49px;transform:scale(1,1);display: none;}
+			.anim1{background:url('../img/addAnim/anim1.png') no-repeat center center;background-size: auto 100%;}
+			.anim2{background:url('../img/addAnim/prop1.png') no-repeat center center;background-size: auto 100%;}
+			.anim3{background:url('../img/addAnim/prop2.png') no-repeat center center;background-size: auto 100%;}
+			.anim4{background:url('../img/addAnim/prop3.png') no-repeat center center;background-size: auto 100%;}
+			.anim5{background:url('../img/addAnim/prop4.png') no-repeat center center;background-size: auto 100%;transform:scale(1.5,1.5);}
+		}
+		.cProp{height: 0;width: 100%;
+			.all{position: absolute;z-index: 998;width: 100%;height: 100%;top:0;left: 0;display: none;
+				.zz{width: 100%;height: 100%;background-color: #000;opacity: 0.8;}
+				.imgbg{position: absolute;z-index: 1000;width: 87px;height: 65px;top:50%;left: 50%;margin: -32px 0 0 -43px;transform:scale(2,2);}
+			}
+			.anim1{.imgbg{background:url('../img/prop/prop1.png') no-repeat center center;background-size: auto 100%;}}
+			.anim2{.imgbg{background:url('../img/prop/prop2.png') no-repeat center center;background-size: auto 100%;}}
+			.anim3{.imgbg{background:url('../img/prop/prop3.png') no-repeat center center;background-size: auto 100%;}}
+			.anim4{.imgbg{background:url('../img/prop/prop4.png') no-repeat center center;background-size: auto 100%;}}
+		}
+		.say{/* width: 100%;height: 10%;position: absolute;top:0;left:0;z-index:998; */height:0;
+			.sayImg{position: absolute;z-index:950;opacity: 0;visibility: hidden;position: absolute;overflow: hidden;}
+			.sayImg1{width:87%;bottom:22%;left: 5%;z-index:998;}
+			.sayImg2{width:69%;bottom:12%;right: 10%;z-index:998;}
+			.sayImg3{width:31.4%;bottom:18%;left: 5%;}
+			.sayImg4{width:28.1%;bottom:33%;right: 10%;}
+			.sayImg5{width:31.4%;bottom:18%;left: 5%;}
+			.sayImg6{width:25.6%;bottom:33%;right: 10%;}
+			.sayImg7{width:31.4%;bottom:18%;left: 5%;}
+			.sayImg8{width:25.6%;bottom:33%;right: 10%;}
+			.sayImg9{width:31.4%;bottom:18%;left: 5%;}
+			.sayImg10{width:27%;bottom:33%;right: 10%;}
+			.sayImg11{width:31.4%;bottom:18%;left: 5%;}
+			.sayImg12{width:28.1%;bottom:33%;right: 10%;}
+		}
+
+
+		.hp{width: 100%;position:relative;z-index:902;margin-top: 1.2rem;padding-bottom: 1rem;
+			.palnBox{width: 443px;height:36px;line-height:36px;position: absolute;left:50%;top:0;margin-left:-221px;}
+			.lf{position: absolute;width:53px;height:32px;top:2px;left:-60px;background: url('../img/hp.png') no-repeat;}
+			.palnOld{width: 100%;height: 100%;background: url('../img/load_plan.png') no-repeat;background-size: 100% 100%;position: relative;}
+			.palnNew{width:100%;height:100%;overflow:hidden;.loadTransition;.hvPlan{width: 443px;height: 36px;background: url('../img/load_plan_hv.png') no-repeat 0 0;background-size: 100% 100%;}}
+			.planvalue{position: absolute;font-size: 20px;font-weight: bold;top:0;right: 10%;color:#fff;z-index: 10;}
+		}
+
+		.btPlay{width: 100%;position: absolute;z-index: 996;bottom:0;left:0;
+			.desk{width: 100%;}
+			.txt{position: absolute;bottom:0;left:0;width: 100%;text-align: center;font-size:32px;color:#d89752;line-height: 1.8rem;}
+			.btnList{width:100%;overflow: hidden;position: absolute;bottom:2.3rem;left:0;z-index: 995;
+				.btnItem{width: 25%;float:left;height: 6.2rem;text-align:center;img{height: 100%;width: auto;}}
+			}
+		}
+		.play{width: 100%;position: absolute;z-index: 940;left: 0;bottom: 0;
+			.playBox{width: 77.2%;margin:0 auto;position: relative;}
+			.body{width: 100%;position: relative;
+				img{width: 100%;}
+				.part{position: absolute;top:0;left:0;width:100%;height:100%;
+					.hand,.bodyT,.bodyD{width:100%;float: left;overflow:hidden;}
+
+					.hand{img{display: none;}}
+					.hand1>.imgHead1{display: block;}
+					.hand2>.imgHead2{display: block;}
+					.hand3>.imgHead3{display: block;}
+
+					.bodyD{position:relative;img{display: none;}#playDiv{position: absolute;width:60%;height: 40%;bottom:0;left:50%;margin-left:-30%;}}
+					.bodyD1>.imgBodyD1{display: block;}
+					.bodyD2>.imgBodyD2{display: block;}
+					.bodyD3>.imgBodyD3{display: block;}
+				}
+			}
+			.feel{width: 100%;position: absolute;bottom:0;left:0;img{width: 100%;display: none;}}
+			.feel1>.imgFeel1{display: block;}
+			.feel2>.imgFeel2{display: block;}
+			.feel3>.imgFeel3{display: block;}
+
+
+			.head{width: 100%;position: absolute;z-index:999;top:0;left:0;overflow:hidden;img{width: 100%;display: none;}}
+			.head1>.imgHead1{display: block;}
+			.head2>.imgHead2{display: block;}
+			.head3>.imgHead3{display: block;}
+			.head4>.imgHead4{display: block;}
+			.head5>.imgHead5{display: block;}
+			.head6>.imgHead6{display: block;}
+			.head7>.imgHead7{display: block;}
+		}
+	}
+}
+
+//中心旋转
+.McenterRotate{animation: McenterRotate 0.5s linear infinite both;}
+//提示上滑
+.touchdown{animation: touchdown 1s linear infinite;}
+
+//游戏结束后背景旋转
+.gameOver>.centerRotate{animation:centerRotate 2s linear infinite both;}
+.gameOver>.bounceInTB{animation:bounceInTB 1s linear 0.2s both;}
+.gameOver>.showBottomTop{animation:showBottomTop 3s linear 0.2 both;}
+.gameOver>.buzz-out-b{animation: buzz-out 0.18s linear infinite;}
+.gameOver>.bounce{animation: bounce 2s linear 0.1s infinite;}
+
+//翻页后效果
+.loadOk{
+	//slg进入
+	.slgTips{animation:slgTips 2s ease 0.1s both;}
+
+	.rollTop{animation: rollTop 1s ease-in-out 0.2s both;}
+	
+	//paly动画效果
+	//进画面时左右倾斜
+	.startBuzz-out-b{animation:buzz-out-b linear 0.1s 80;}
+	.startDoSkew{
+		.hand{animation: right-hand 0.5s linear 15;}
+		.bodyT{animation: right-bodyT 0.5s linear 15;}
+		.bodyD{animation: right-bodyD 0.5s linear 15;}
+	}
+	//探照灯效果
+	.lightMove{animation:lightMove 5s linear 0.1s both;}
+	//文字出现
+	
+	.sayImg1{animation:fadeIn 3s linear 0.5s both;}
+	.sayImg2{animation:fadeIn 3s linear 1s both;}
+		
+	//控制说话
+	.say3>.sayImg3,.say4>.sayImg4,.say5>.sayImg5,.say6>.sayImg6,.say7>.sayImg7,.say8>.sayImg8,.say9>.sayImg9,.say10>.sayImg10{animation:sayShow 3s linear both;}
+	.say11>.sayImg11,.say12>.sayImg12{animation:sayShow 3s linear backwards;}
+
+
+	//颤抖
+	.buzz-out{animation:buzz-out linear 0.1s infinite;}
+	.buzz-out-b{animation:buzz-out-b linear 0.1s infinite;}
+
+	//左倾斜
+	.left-Skew{
+		.hand{animation: left-hand 0.5s linear both;}
+		.bodyT{animation: left-bodyT 0.5s linear both;}
+		.bodyD{animation: left-bodyD 0.5s linear both;}
+	}
+	
+	//左右倾斜
+	.doSkew{
+		.hand{animation: right-hand 0.5s linear infinite;}
+		.bodyT{animation: right-bodyT 0.5s linear infinite;}
+		.bodyD{animation: right-bodyD 0.5s linear infinite;}
+	}
+	//左右倾斜大幅度
+	.doSkewBig{
+		.hand{animation: right-hand-big 0.5s linear infinite;}
+		.bodyT{animation: right-bodyT-big 0.5s linear infinite;}
+		.bodyD{animation: right-bodyD-big 0.5s linear infinite;}
+	}
+
+	//突然放大
+	.scale-bg{animation: scale-bg 0.5s linear 1 both;}
+
+	//偏头效果z
+	.rotateHeadX{animation: rotateHeadX 0.2s linear 5s infinite;}
+	.rotateHeadZ{animation: rotateHeadZ 0.2s linear infinite;}
+
+	//偏头效果y
+	.rotateHeadY{animation: rotateHeadY 0.2s linear infinite;}
+
+	//舌头出来并上下
+	.rotateHeadYZ{animation: rotateHeadYZ 0.5s linear infinite;}
+}
+
+@media (max-width: 415px){
+	html{font-size: 16px;}
+	.doScale{transform: scale(0.65,0.65);}
+}
+@media (max-width: 375px){
+	html{font-size: 14px;}
+	.doScale{transform: scale(0.59,0.59);}
+}
+@media (max-width: 320px){
+	html{font-size: 12px;}
+	.doScale{transform: scale(0.5,0.5);}
+	.content #column2 .logo{margin-top: 0;}
+	.content #column2 .txt,.content #column2 .shareBtn{margin-top: 2%;}
+}
