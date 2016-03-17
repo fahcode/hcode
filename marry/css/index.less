@@ -1,0 +1,418 @@
+/* reset */
+*{margin:0;padding:0;border:0;outline: 0;}
+html{overflow-x:auto!important;overflow-x:hidden;overflow-y:auto}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000;}del,ins{text-decoration:none}p{ margin:0; padding:0}img {-ms-interpolation-mode: bicubic;}
+a{ text-decoration:none}
+.clear { clear:both; }
+.hide{ display: none;}
+img{ display: block; width: 100%; vertical-align:top;}
+.hidden,a strong, .logo, .navTit em, .cyLogo {text-indent:-5000px; display:block; height:0; font-size:0; line-height:0; overflow:hidden}
+
+body{ width:100%; overflow:hidden; font:normal 0.24rem/0.44rem 'Microsoft Yahei',Tahoma,Helvetica,Arial,sans-serif; color:#fff; word-wrap:break-word; word-break:break-all;-webkit-tap-highlight-color:rgba(255,255,255,0); background-color:#fff;max-width: 640px;margin:0 auto;}
+.pa{position: absolute;}
+.tfo00{transform-origin:0 0;}
+.tfo01{transform-origin:0 100%;}
+.tfo55{transform-origin:50% 50%;}
+.tfo50{transform-origin:50% 0;}
+.tfo51{transform-origin:50% 100%;}
+.tfo15{transform-origin:100% 50%;}
+.tst{transition: all 1s linear;}
+.ot0{opacity: 0;visibility: hidden;}
+.hide{opacity: 0;display: none;}
+.show{opacity: 1;display: block;}
+.anim3D{perspective: 800px;transform-style: preserve-3d;}
+.close{width:0.64rem;height: 0.62rem;display: block;background:url('../img/close.png') no-repeat center center / 0.32rem 0.31rem;top:0.1rem;right: 0.1rem;z-index: 50;}
+
+/* 获取屏幕高度 */
+.testHei{position:absolute;top:0;left:0;bottom:0;right:0;
+	.winHei{width: 100%;height: 100%;}
+}
+
+//背景图
+.bgList{top:0;left: 0;width: 100%;height: 100%;z-index: 1;
+	&>div{opacity: 0;width: 100%;height: 100%;top:0;left: 0;transition:all .5s ease;visibility: hidden;}
+	&>.bgShow{opacity: 1;visibility: visible;}
+}
+.bg1{background:url('../img/bg1.jpg') no-repeat center center / 100% 100%;z-index: 2;}
+.bg2{background:url('../img/bg2.jpg') no-repeat center center / 100% 100%;z-index: 3;}
+.bg3{background:url('../img/bg3.jpg') no-repeat center center / 100% 100%;z-index: 4;}
+
+.main{width: 100%;position: relative;overflow: hidden;perspective: 800px;}
+
+.music{width:0.6rem;height:0.6rem;position: absolute;top:0.2rem;right:0.2rem;z-index:1000;background: url('../img/normalmusic.svg') no-repeat center center / 100% 100%;}
+
+.loading{width:100%;height:100%;top:0;left:0;z-index: 50;background-color:#000;}
+.loading .planValue{position:absolute;bottom:-1rem;left:0;width:100%;font-size: 0.32rem;color:#fff;text-align: center;}
+
+/* 信函层 */
+.letter{background:url('../img/bg1.jpg') no-repeat center center / 100% 100%;width:100%;height:100%;top:0;left:0;z-index: 20;
+	.Tit{width:4.2rem;height: 1rem;top:20%;left: 50%;margin-left:-2.1rem;background:url('../img/letterTit.png') no-repeat center center / 100% 100%;}
+	.letterBox{width:5.24rem;height: 5.24rem;background:url('../img/letter/letterMain.png') no-repeat center center / 100% 100%;top:60%;left:50%;margin:-2.62rem 0 0 -2.62rem;
+		.ImgBg{background-size: 100% 100%;background-position: center center;background-repeat: no-repeat;}
+		.part1{width:3.94rem;height:3.69rem;background-image:url('../img/letter/img1.png');bottom:-0.08rem;left:50%;margin-left:-1.97rem;z-index: 3;}
+		.part2{width:3.2rem;height:1.77rem;background-image:url('../img/letter/letterT.png');top:1.86rem;left:50%;margin-left:-1.6rem;z-index: 5;}
+		.part3{width:3.8rem;height:1.86rem;background-image:url('../img/letter/img2.png');top:1.55rem;left:50%;margin-left:-1.9rem;z-index: 8;opacity:1;-webkit-filter: blur(0px) grayscale(0);}
+		.part4{width:4.68rem;height:3.97rem;background-image:url('../img/letter/letterLight.png');top:-0.57rem;left:50%;margin-left:-2.34rem;z-index: 9;opacity:0;-webkit-filter: blur(0px) grayscale(0);}
+		.part5{width:2.48rem;height:2.48rem;top:2rem;left:50%;margin-left:-1.24rem;z-index: 10;
+			.xih{background-image: url('../img/letter/xiBg.png');width:100%;height:100%;z-index:11;}
+			.xis{background-image: url('../img/letter/xi.png');width:100%;height:100%;z-index:12;}
+		}
+		.part6{width:1.53rem;height:1.04rem;background-image:url('../img/letter/cakes.png');top:0.3rem;right:0;z-index: 13;-webkit-filter: blur(0px) grayscale(0);}
+		.part7{width:3.94rem;height:3.6rem;background-image:url('../img/letter/img7.png');bottom:-0.08rem;left:50%;margin-left:-1.97rem;z-index: 6;-webkit-filter: blur(0px) grayscale(0);}
+		.part8{width:3.94rem;height:5.23rem;background-image:url('../img/letter/img8.png');top:0rem;left:50%;margin-left:-1.97rem;z-index: 1;-webkit-filter: blur(0px) grayscale(0);}
+	}
+}
+.play{width:100%;height:100%;position: relative;z-index: 5;
+	.doUp{width:0.56rem;height:0.61rem;position: absolute;bottom:5%;left: 50%;margin-left:-0.28rem;background:url('../img/up.png') no-repeat center center / 100% 100%;z-index: 40;}
+	.swiper-wrapper{overflow: hidden;width:100%;z-index: 100;}
+	.column{width: 100%;height: 100%;float: left;position: relative;}
+	
+	.letterTxt{background:url('../img/bg2.jpg') no-repeat center center / 100% 100%;
+		.txtBg{width:4.14rem;height:6.98rem;padding:0.4rem;top:50%;left:50%;margin:-3.89rem 0 0 -2.47rem;background: url('../img/letterTxt/txtBg.jpg') no-repeat center center / 100% 100%;position: relative;}
+		.txt1{width:0.92rem;height:0.34rem;background: url('../img/letterTxt/txt1.png') no-repeat center center / 100% 100%;margin-bottom:0.2rem;}
+		.txt2{width:3.27rem;height:0.56rem;background: url('../img/letterTxt/txt2.png') no-repeat center center / 100% 100%;margin-bottom:0.2rem;}
+		.txt3{width: 100%;text-align: center;font-size: 0.4rem;color:#ff78a7;margin-top:0.1rem;}
+		.coupleImg{width:4.14rem;height:4.14rem;background: url('../img/letterTxt/coupleImg1.png') no-repeat center center / 100% 100%;margin:0 auto;}
+		.starList{
+			.star{width:0.55rem;height:0.62rem;top:-0.62rem;left: 0.5rem;background: url('../img/letterTxt/star.png') no-repeat center center / 100% 100%;}
+		}
+		.invite{width:3.5rem;height:1.18rem;background: url('../img/invite.png') no-repeat center center / 100% 100%;margin:0 auto;}
+	}
+	.marryImg1{background:url('../img/bg3.jpg') no-repeat center center / 100% 100%;perspective: 12rem;
+		.targetBox{position:relative;width:100%;height:100%;z-index: 2;}
+		.couple{width:4.2rem;height:6.15rem;position: absolute;top:50%;margin-top: -3.07rem;background-position: center center;background-size: 100% 100%;background-repeat: no-repeat;transition:all 0.5s linear;}
+		.img1{background-image: url('../img/marryImg/coupleImg2.png');left:0.2rem;z-index:4;transform: rotateY(0deg) translateZ(1.3rem);}
+		.img2{background-image: url('../img/marryImg/coupleImg3.png');right:0.2rem;z-index:20;transform: rotateY(-70deg) translateZ(-2.1rem);} 
+		.txt1{width:0.4rem;height:3.01rem;background: url('../img/marryImg/txt1.png') no-repeat center center / 100% 100%;top:50%;left:4.4rem;margin:-1.5rem 0 0 0rem;z-index: 5;transition:all 0.3s linear;}
+		.bkbg{width:2rem;height:3rem;position: absolute;top:50%;margin-top: -1.5rem;background-position: center center;background-size: 100% 100%;background-repeat: no-repeat;z-index: 2;transition: all 0.5s linear;}
+		.b1{background-image: url('../img/marryImg/coupleImg2.png');left:-0.55rem;opacity:0;}
+		.b2{background-image: url('../img/marryImg/coupleImg3.png');right:-0.55rem;opacity:1;}
+		.targetBox.showWife{
+			.img1{z-index:20;transform:rotateY(70deg) translateZ(-2.1rem);}
+			.img2{z-index:4;transform:rotateY(0deg) translateZ(1.3rem);}
+			.txt1{left: 1.6rem;}
+			.b1{opacity:1;}
+			.b2{opacity:0;}
+		}
+	}
+	.marryImg2{background:url('../img/bg4.jpg') no-repeat center center / 100% 100%;
+		.coupleImgList{width:4.12rem;height:4.44rem;top:15%;left:50%;margin-left:-2.06rem;
+			&>div{transition:all 1s ease;}
+			.coupleImg{width: 100%;height: 100%;background-size:100% 100%;background-repeat:no-repeat;background-position:center center;top:0;left: 0;z-index:10;opacity:0;visibility: hidden;.tfo51;}
+			.coupleImg:nth-child(1){background-image:url('../img/marryImg/coupleImg4.png');}
+			.coupleImg:nth-child(2){background-image:url('../img/marryImg/coupleImg5.png');}
+			.coupleImg:nth-child(3){background-image:url('../img/marryImg/coupleImg6.png');}
+			.coupleImg:nth-child(4){background-image:url('../img/marryImg/coupleImg7.png');}
+			.coupleImg:nth-child(5){background-image:url('../img/marryImg/coupleImg8.png');}
+			.coupleImg:nth-child(6){background-image:url('../img/marryImg/coupleImg9.png');}
+			.coupleImg:nth-child(7){background-image:url('../img/marryImg/coupleImg10.png');}
+			.coupleImg:nth-child(8){background-image:url('../img/marryImg/coupleImg11.png');}
+			.coupleImg:nth-child(9){background-image:url('../img/marryImg/coupleImg12.png');}
+			.coupleImg:nth-child(10){background-image:url('../img/marryImg/coupleImg13.png');}
+			.coupleImg:nth-child(11){background-image:url('../img/marryImg/coupleImg14.png');}
+			.rotate0{transform:rotateZ(-36deg) translate(-3.7rem,-1.2rem);opacity:1;visibility: visible;}
+			.rotate1{transform:rotateZ(0deg) translate(0rem);opacity:1;visibility: visible;}
+			.rotate2{transform:rotateZ(36deg) translate(3.7rem,-1.2rem);opacity:1;visibility: visible;}
+			.rotate3{transform:rotateZ(72deg) translate(4.2rem,-3.8rem);opacity:1;visibility: visible;}
+			.rotate4{transform:rotateZ(-72deg) translate(-4.2rem,-3.8rem);opacity:1;visibility: visible;}
+		}
+		.pulley{width:6.4rem;height:1.14rem;top:15%;left:0;z-index:6;margin-top: 4.7rem;
+			.axle{width:100%;height:100%;top:0;left:0;background: url('../img/axle.jpg') no-repeat center center / 100% 100%;}
+			.point{width:0.68rem;height:0.68rem;top:0.52rem;left:0;background: url('../img/point.png') no-repeat center center / 100% 100%;}
+			#point{transition: all 0.5s linear;}
+			.w1{top:0.52rem;left:0rem;}
+			.w2{top:0.17rem;left:0.64rem;}
+			.w3{top:-0.09rem;left:1.28rem;}
+			.w4{top:-0.24rem;left:1.92rem;}
+			.w5{top:-0.32rem;left:2.56rem;}
+			.w6{top:-0.32rem;left:3.2rem;}
+			.w7{top:-0.21rem;left:3.84rem;}
+			.w8{top:-0.05rem;left:4.48rem;}
+			.w9{top:0.2rem;left:5.12rem;}
+			.w10{top:0.52rem;left:5.76rem;}
+		}
+		.txt1{width:0.41rem;height:2.53rem;background: url('../img/marryImg/txt2.png') no-repeat center center / 100% 100%;top:15%;left:50%;margin:5.3rem 0 0 -0.5rem;z-index: 7;}
+		.txt2{width:0.42rem;height:1.83rem;background: url('../img/marryImg/txt3.png') no-repeat center center / 100% 100%;top:15%;left:50%;margin:5.3rem 0 0 0.2rem;z-index: 8;}
+	}
+	.marryTime{background:url('../img/bg5.png') no-repeat center center / 100% 100%;
+		.timeBox{width: 5.6rem;height: 4.8rem;top:50%;left:50%;margin:-2.4rem 0 0 -2.8rem;}
+		.month{color:#fff;font-size:0.7rem;top:-0.7rem;left: 0;}
+		.year{color:#fff;font-size:0.35rem;top:-0.5rem;right: 0;}
+		.hour{color:#fff;font-size:0.35rem;bottom:-0.5rem;right: 0;}
+		.dayList{width: 108%;overflow: hidden;
+			.item{width: 1.1rem;height: 0.78rem;margin:0 1px 1px 0;float: left;overflow: hidden;opacity: 0;visibility: hidden;}
+			.item.marry span{color: red;font-weight: bold;font-size: 0.25rem;}
+			.t{padding:0.04rem 0;height:0.7rem;text-align: center;background-color:rgba(255,255,255,0.8);}
+			span{font-size: 0.18rem;line-height: 0.35rem;display: block;width: 100%;color:#404449;}
+		}
+	}
+	.route{background:url('../img/bg6.jpg') no-repeat center center / 100% 100%;
+		.routeBox{width:5.6rem;height: 6.2rem;top:50%;left:50%;margin:-3.1rem 0 0 -2.8rem;}
+		.tit{color:#000;font-size:0.36rem;top:-1.2rem;left: 0;padding:0.1rem 0 0.05rem;}
+		.txt{color:#35aa4d;font-size:0.3rem;bottom:-1rem;left: 0;}
+		.times{color:#35aa4d;font-size:0.3rem;bottom:-1rem;right: 0;}
+		.option{width:100%;height: 0.5rem;top:-0.6rem;left: 0;
+			dl{width: 100%;height: 100%;}
+			dt,dd{line-height: 0.5rem;color: #35aa4d;font-size: 0.3rem;float: left;}
+			select{width: 1.8rem;border-radius: 0.1rem;text-align: center;color: red;font-size: 0.26rem;border:0;padding:0;}
+			option{text-align: center;font-size: 0.26rem;}
+		}
+		.result{width: 100%;height: 100%;background-color:rgba(255,255,255,0.9);
+			.box{padding:0.3rem;}
+			.goal{color:#000;font-size:0.3rem;line-height:0.3rem;.tt{font-size: 0.2rem;}}
+			.goWay{width:100%;}
+			table{font-family:Tahoma,"宋体";color:#333;width:100%;line-height: 0.28rem;text-align: center;vertical-align: middle;}
+			tr{border:1px solid #999;}
+			.h{background-color:rgba(29, 127, 195,0.8);color:#fff;}
+			.c{
+				td:nth-child(1){font-size: 0.25rem;font-weight: bold;width:20%;}
+				td:nth-child(2){font-size: 0.22rem;font-weight: bold;width:20%;}
+				td:nth-child(3){font-size: 0.16rem;font-weight: bold;width:33%;}
+				.end-t{color:#999;}
+				td:nth-child(4){font-size: 0.2rem;width:27%;}
+			}
+		}
+	}
+	/* 祝福 */
+	.liveWish{background:url('../img/bg7.jpg') no-repeat center center / 100% 100%;
+		.live{width:3.72rem;height:2.96rem;top:10%;left:50%;margin-left:-1.86rem;
+			.groom{width:1.66rem;height:2.96rem;top:0;left:0;background:url('../img/groom.png') no-repeat center center / 100% 100%;}
+			.bride{width:2.14rem;height:2.66rem;top:0.27rem;right:0;background:url('../img/bride.png') no-repeat center center / 100% 100%;}
+		}
+		.txtBox{top:10%;left:50%;width:6rem;margin:3.3rem 0 0 -3rem;text-align: center;font-size: 0.28rem;color:#888;line-height: 0.4rem;
+			.txtB{font-size:0.44rem;padding-bottom: 0.2rem;color:rgb(255, 120, 167);}
+			.l{text-align: left;text-indent:1.34rem;}
+			.r{text-align: right;margin-right:1.34rem;}
+		}
+		.Wish{width:100%;margin-top: 0.2rem;
+			.WishLive{display:block;width:0.89rem;height:0.78rem;margin:0 auto;background:url('../img/love.png') no-repeat center center / 100% 100%;}
+			.WishLive.on{background-image:url('../img/loveS.png');}
+			.txt{color:rgb(255, 120, 167);font-size:0.24rem;text-align: center;margin-top: 0.1rem;}
+		}
+
+	}
+}
+
+/*******默认持续动画***************/
+// 音效
+.musicAnim{animation:rotateZ 2s linear 0s infinite;}
+//喜灯效
+.xiAnim{animation:xiAnim 2s linear 0s infinite both;}
+.touchdown{animation:touchdown 1s linear 0s infinite both;}
+.planValue{animation:rubberBand .8s linear infinite both;}
+/**********条件控制动画************/
+/*邀请函*/
+.loadOk>.Tit{animation:lightSpeedIn 1s ease-out 0s 1 both;}
+.loadOk>.letterBox{animation:zoomIn 0.5s ease-out 1s 1 both;}
+.loadOk.open{
+	//翻开
+	.part3{animation:openBoxHide 2s ease-out 0s 1 both;}
+	//隐藏喜字
+	.part5{transition: all 0.5s ease;opacity: 0;visibility: hidden;}
+	//显示背景
+	.part8{transition: all 0.5s ease 1.5s;opacity: 1;visibility: visible;}
+	//显示光照
+	.part4{animation:showBig 0.8s linear 1.5s 1 both;}
+	//翻星星图
+	.part6{animation:pullUp 1s ease-out 2.5s 1 both;}
+	.part2{animation:tada 2s ease-out 3.5s infinite both;}
+}
+.loadOk.see{transition: all 1s ease 0s;opacity: 0;visibility: hidden;}
+
+.play.active{
+	.letterTxt.swiper-slide-active{
+		.txt1{animation:slideInRight 1s ease-out 0s 1 both;}
+		.txt2{animation:stretchRight 1s ease-out 1s 1 both;}
+		.coupleImg{animation:fadeIn 2s ease-out 2s 1 both;}
+		.txt3{animation:flipInY 1s ease-in 3s 1 both;}
+		.invite{animation:zoomIn 1s ease-out 4s 1 both;}
+	}
+	.marryImg1.swiper-slide-active{
+		.txt1{animation:pulse 1s ease-out 0s infinite both;}
+	}
+	.marryImg2.swiper-slide-active{
+		.txt1{animation:fadeInUp 0.5s linear 0.1s 1 both;}
+		.txt2{animation:fadeInUp 0.5s linear 0.6s 1 both;}
+	}
+	.marryTime.swiper-slide-active{
+		.month{animation:fadeInLeft 2s ease 0.1s 1 both;}
+		.year{animation:fadeInRight 2s ease 0.2s 1 both;}
+		.hour{animation:fadeInRight 2s ease 0.4s 1 both;}
+		.dayList>.item{animation:zoomIn 2s ease 0s 1 both;}
+		.dayList>.item.marry{animation:tada 2s ease-out 0s infinite both;opacity:1;visibility:visible;}
+		.dayList>.item:nth-child(2){animation-delay:0.1s;}
+		.dayList>.item:nth-child(3){animation-delay:0.2s;}
+		.dayList>.item:nth-child(4){animation-delay:0.3s;}
+		.dayList>.item:nth-child(5){animation-delay:0.4s;}
+		.dayList>.item:nth-child(6){animation-delay:0.5s;}
+		.dayList>.item:nth-child(7){animation-delay:0.6s;}
+		.dayList>.item:nth-child(8){animation-delay:0.7s;}
+		.dayList>.item:nth-child(9){animation-delay:0.8s;}
+		.dayList>.item:nth-child(10){animation-delay:0.9s;}
+		.dayList>.item:nth-child(11){animation-delay:1s;}
+		.dayList>.item:nth-child(12){animation-delay:1.1s;}
+		.dayList>.item:nth-child(13){animation-delay:1.2s;}
+		.dayList>.item:nth-child(14){animation-delay:1.3s;}
+		.dayList>.item:nth-child(15){animation-delay:1.4s;}
+		.dayList>.item:nth-child(16){animation-delay:1.5s;}
+		.dayList>.item:nth-child(17){animation-delay:1.6s;}
+		.dayList>.item:nth-child(18){animation-delay:1.7s;}
+		.dayList>.item:nth-child(19){animation-delay:1.8s;}
+		.dayList>.item:nth-child(20){animation-delay:1.9s;}
+		.dayList>.item:nth-child(21){animation-delay:2s;}
+		.dayList>.item:nth-child(22){animation-delay:2.1s;}
+		.dayList>.item:nth-child(23){animation-delay:2.2s;}
+		.dayList>.item:nth-child(24){animation-delay:2.3s;}
+		.dayList>.item:nth-child(25){animation-delay:2.4s;}
+		.dayList>.item:nth-child(26){animation-delay:2.5s;}
+		.dayList>.item:nth-child(27){animation-delay:2.6s;}
+		.dayList>.item:nth-child(28){animation-delay:2.7s;}
+		.dayList>.item:nth-child(29){animation-delay:2.8s;}
+		.dayList>.item:nth-child(30){animation-delay:2.9s;}
+	}
+	.route.swiper-slide-active{
+		.tit{animation:fadeInLeft 2s ease 0.1s 1 both;}
+		.txt{animation:fadeInLeft 2s ease 0.5s 1 both;}
+		.option{animation:fadeInLeft 2s ease 0.5s 1 both;}
+		.times{animation:fadeInRight 2s ease 0.2s 1 both;}
+		.hour{animation:fadeInRight 2s ease 0.4s 1 both;}
+		.result{animation:fadeIn 2s ease-out 2s 1 both;}
+	}
+	.liveWish.swiper-slide-active{
+		.groom{animation:fadeInLeft 1s ease 0s 1 both;}
+		.bride{animation:fadeInRight 1s ease 0s 1 both;}
+		.txtB.l{animation:zoomIn 2s ease 1s 1 both;}
+		.txtB.r{animation:zoomIn 2s ease 1.3s 1 both;}
+		.txtC{animation:zoomIn 2s ease 2s 1 both;}
+		.WishLive,.Wish>.txt{animation:fadeIn 2s ease-out 4s 1 both;}
+		.Heartbeat{}
+	}
+}
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top:50%;left:50%;margin:-1.5rem 0 0 -0.5rem;
+}
+ 
+.container1 > div, .container2 > div, .container3 > div {
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: rgb(255, 120, 167);
+ 
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+ 
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+ 
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+ 
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+ 
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+ 
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+ 
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+ 
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+ 
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+ 
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+ 
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+
+/* 控制礼包名字大小 尺寸640*/
+.doScale{transform: scale(1,1);}
+@media only screen and (max-width : 480px){
+	
+	.doScale{transform:scale(0.75,0.75);}
+}
+@media only screen and (max-width : 415px){
+	
+	.doScale{transform:scale(0.648,0.648);}
+}
+@media only screen and (max-width : 375px){
+	.doScale{transform:scale(0.586,0.586);}
+}
+@media only screen and (max-width : 320px){
+	.doScale{transform:scale(0.5,0.5);}
+}
