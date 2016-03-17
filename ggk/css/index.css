@@ -1,0 +1,245 @@
+body,html,div,p,img,a,ul,li,input{ margin:0; padding:0}
+a,area { text-decoration:none; color:#6cff00; blr:expression(this.onFocus=this.blur());outline:0; zoom:1; cursor:pointer}
+ul,li{list-style:none}
+img { border:0}
+body { line-height:20px; font-size:12px; color:#fff; font-family:"微软雅黑";width:100%;height:100%;}
+.bg1 {width:100%;background:url(../img/bg1.jpg) no-repeat center top #000; position:relative; z-index:1}
+.bg2 {width:100%;background:url(../img/bg2.jpg) no-repeat center top #000}
+#container { width:1000px; margin:0 auto; position:relative; z-index:4}
+#container img{display:block;}
+.clearfix:after{content:","; clear:both; font-size:0; height:0; visibility:hidden; display:block}
+.clearfix{zoom:1}
+
+
+.flash{position:absolute; top:532px; left:51px; width:479px; height:290px; overflow:hidden; z-index:2}
+
+.jifen{
+	position:absolute;
+	top:435px;
+	right:280px;
+	color:#fff;
+	font-family:"微软雅黑",'宋体';
+	font-size:12px;
+	z-index:2;
+	display: none;
+}
+	.jifen div{height:20px; line-height:20px; width:210px; overflow:hidden}
+	.jifen div a{color:#ff0; display:inline-block; margin-left:7px}
+
+/*rank*/
+#rankBox {width:413px; height:300px; overflow:hidden; position:absolute; top:547px; left:579px; color:#fff}
+#rankBox div{height:30px; line-height:30px}
+#rankBox div span{display:block; float:left; text-align:center}
+#rankBox div .s1{width:138px}
+#rankBox div .s2{width:176px}
+#rankBox div .s3{width:98px}
+
+/*兼容遨游的style  OP*/
+.img1Link{
+	position: absolute;
+	width: 200px;
+	height: 84px;
+	top: 423px;
+	cursor: pointer;
+	right: 298px;
+	border-radius: 50px;
+	background: url(../img/bgpng.png) repeat;
+	z-index: 9;
+	}
+.img4Link{
+	position: absolute;
+	width: 100%;
+	top: 227px;
+	left: 1px;
+	z-index: 99;
+	}
+.img4Link li{
+	cursor:pointer;
+	width:320px;
+	height:290px;
+	float:left;
+	margin:0 12px 20px 0;
+	background:url(../img/bgpng.png) repeat;
+	}
+/*兼容遨游的style  ED*/
+/*弹出层*/
+/*#popBg{ position:absolute; background:#000; left:0; top:0; z-index:5; width:100%; height:100%; display:none}	
+	.showDiv{position:absolute; z-index:99; width:288px; height:288px; overflow:hidden; display:none}
+	.showDiv div{position:absolute; z-index:100}
+	.showDiv .close{width:33px; height:33px; overflow:hidden; top:12px; left:242px}
+	.showDiv .close a{display:block; height:33px; width:33px; text-indent:-999em; background:url(../img/close.png) no-repeat}
+	.showDiv .exchange01,.showMsg .close{width:122px; height:38px; overflow:hidden; top:232px; left:85px}
+	.showDiv .exchange01 a,.showMsg .close a{display:block; height:100%; width:100%; text-indent:-999em; background:url(../img/btn_dh.jpg) no-repeat}
+	.showMsg .close a{background:url(../img/btn_jxdh.jpg) no-repeat}
+	.showMsg{left: 50%; margin-left: -144px; margin-top: -144px; overflow: hidden; position: fixed; _position:absolute; top: 50%; }
+	.showMsg .tab_msg{position:absolute; z-index:100; width:200px; height:120px; line-height:50px; left:44px; top:80px; text-align:center; color:#b81019; font-family:"微软雅黑",'宋体'; font-size:20px; font-weight:bolder}*/
+
+
+#popBox{position:absolute}
+.rareItems{width:536px; height:611px; overflow:hidden; background:url(../img/rareItems.png) no-repeat center center}
+.topItems{width:536px; height:351px; overflow:hidden; background:url(../img/topItems.png) no-repeat center center}
+
+.imglink{position:relative;width:100%;overflow:hidden;float: left;}
+.showDiv{height:288px; width:288px; overflow:hidden}
+.showDiv .exchange{ position:absolute; width:122px; height:38px; overflow:hidden; top:232px; left:85px}
+.showDiv .exchange a{display:block; height:100%; width:100%; text-indent:-999em; background:url(../img/btn_dh.jpg) no-repeat}
+.showDiv01{background:url(../img/pic/1.png) no-repeat}
+.showDiv02{background:url(../img/pic/2.png) no-repeat}
+.showDiv03{background:url(../img/pic/3.png) no-repeat}
+.showDiv04{background:url(../img/pic/4.png) no-repeat}
+.showDiv05{background:url(../img/pic/5.png) no-repeat}
+.showDiv06{background:url(../img/pic/6.png) no-repeat}
+.showDiv07{background:url(../img/pic/7.png) no-repeat}
+.showDiv08{background:url(../img/pic/8.png) no-repeat}
+.showDiv09{background:url(../img/pic/9.png) no-repeat}
+.showDiv10{background:url(../img/pic/10.png) no-repeat}
+.showDiv11{background:url(../img/pic/11.png) no-repeat}
+.showDiv12{background:url(../img/pic/12.png) no-repeat}
+.showDiv13{background:url(../img/pic/13.png) no-repeat}
+.tips{background:url(../img/msg.png) no-repeat}
+.tips .exchange{display:none}
+
+.close{position:absolute; width:33px; height:33px; overflow:hidden; top:12px;right:20px}
+.close a{width:33px; height:33px; text-indent:-999em; overflow:hidden; background:url(../img/close.png) no-repeat; display:block}
+	
+		
+
+.topItems .exchange,.rareItems .exchange{display:none}
+
+.tab_msg{position:absolute; z-index:100; width:200px; height:120px; line-height:50px; left:44px; top:80px; text-align:center; color:#b81019; font-family:"微软雅黑",'宋体'; font-size:20px; font-weight:bolder}
+
+
+
+
+.verify{width:408px;height:280px;position:absolute;top:525px;left:16px;overflow:hidden;z-index:10;zoom:1; font-size:12px;}
+.verify tr{padding-bottom: 6px;display: block;width:100%;float: left;}
+.verify th{width: 70px;color:#fff;}
+.verify td{color:#fff;}
+.tab04{position:absolute;top:56px;left:38px;}
+.verify input{background:#fff; color:#000;_color:red;_line-height:22px; border: 0;height: 22px;}
+.verify .but{position: absolute;width:104px;height:35px;bottom:15px;background: url("../img/linkbg.png") repeat;text-indent: -1000px; }
+.verify .succ_info{position: absolute;top: 100px;left: 10%;width: 80%;text-align: center;font-size: 20px;color: red;}
+.verify .but3{left:50%;margin-left:-52px;}
+.verify .but2{right:62px;}
+.verify .but1{left:71px;}
+.info{position:relative;top:-180px;width:325px;height:100px;left:20px;display:block;font:700 22px/50px '微软雅黑';color:red; text-align:center;}
+
+
+/*大转盘*/
+
+.Rotare{ position:absolute; top:742px;left:130px; width:488px; overflow:hidden; z-index:100;}
+.Rotare a{ text-indent:-2000px;}
+.topBut{display:block; background:url(../img/show.png) repeat; width:200px; height:86px;  top:18px; left:189px; position:absolute; z-index:101;}
+.cenBut{display:block; background:url(../img/show.png) repeat; width:115px; height:155px;  top:117px; left:41px; position:absolute; z-index:101;}
+.bottomBut{display:block; background:url(../img/show.png) repeat; width:70px; height:183px;  top:300px; left:10px; position:absolute; z-index:101;}
+
+.rotate-con-pan {
+    position: relative;
+    width: 488px;
+    height: 488px;
+    padding-top: 105px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0 auto;
+    display:none;
+    z-index:99;
+}
+.rvml{_top:20px; }
+
+.pan1{background: url(../img/disk1.png) no-repeat 0 0;background-size: 100% 100%;}
+.pan2{background: url(../img/disk2.png) no-repeat 0 0;background-size: 100% 100%;}
+.pan3{background: url(../img/disk3.png) no-repeat 0 0;background-size: 100% 100%;}
+
+.showImg{ display:block;}
+.rotate-con-zhen {
+    width: 240px;
+    height: 270px;
+    margin-top:0px;
+    _margin-top:-20px;
+    margin-left: 127px;
+    cursor:pointer;
+    position:relative;
+    z-index:1000;
+    float: none!important;
+    display:block;
+}
+
+
+/* 打靶 */
+.ggk{position: relative;width: 100%;overflow: hidden;}
+
+/* 刮卡区 */
+.ggk .ggkmain{position: absolute;top:25px;left: 0;z-index:9;width: 100%;overflow: hidden;}
+
+.ggk .ggkmain .listbox{width: 1030px;overflow: hidden;margin-bottom: 40px;}
+.ggk .ggkmain .listbox .list{float: left;margin:0 30px 30px 0;width: 300px;padding:5px;border:1px solid #5a1a14;background: #000;}
+.ggkmain .listbox .list{width: 105px;top: 207px;left: 350px;text-align: center;}
+.ggkmain .listbox .list .gift{position: relative;text-align: center;}
+.listbox .list .gift .giftImg{width: 300px;height: 185px;background:url('../img/giftBg.jpg') no-repeat center top;margin-bottom: 10px;}
+.listbox .list .gift .giftImg img{display: block;width: 300px;height: 185px;}
+.listbox .list .gift .giftType{position: absolute;top:15px;left:0;z-index: 10;width: 100%;color: #fdd0b6;font-size: 14px;}
+.listbox .list .gift .giftTips{position: absolute;bottom:10px;right:15px;z-index: 10;color: #e7b099;font-size: 12px;}
+
+.ggkmain .listbox .list .btn{display: inline-block;text-align: center;width: 119px;height: 36px;background: url('../img/ggk-icon.png') no-repeat;margin:0 10px;}
+.ggkmain .listbox .list .ggkBtn{background-position: 0px 0px;}
+.ggkmain .listbox .list .doFive{background-position: -224px 0px;}
+.ggk .ggkmain .plan{width: 100%;overflow: hidden;}
+.ggk .ggkmain .plan .planBar{float: left;width:518px;height:57px;padding:3px 2px 0 3px;background: url('../img/ggk-icon.png') no-repeat -4px -177px;margin-right: 20px;}
+.ggk .ggkmain .plan .planBar .bar{width: 1px;height:31px;background: url('../img/bar-show.png') no-repeat;}
+.ggk .ggkmain .plan .planBar span{float: right;margin-right: 92px;font-size: 16px;}
+.ggk .ggkmain .plan .planInfo{line-height: 34px;color: #ffccad;font-size: 14px;}
+.ggk .ggkmain .plan .planInfo span{color: #ff3c3c;font-size: 28px;}
+
+
+
+
+
+.ggkResult{position: absolute;width: 227px;height: 180px;padding:10px;font-size: 14px;color: #fff;font-weight: bold;background:url('../img/resultbg.png') no-repeat;top:180px;left:380px;z-index: 999;text-align: center;display: none;}
+.ggkResult .ggkName{color: #ffe075;}
+.ggkResult img{display: block;margin:0 auto;float: none;margin-top:0px;}
+.ggkResult .btn-box .btn{display: inline-block;width: 80px;height: 30px;background-color: #c76505;color: #fff;line-height: 30px;font-size: 14px;margin-top: 10px;border-radius: 5px;}
+
+.ggkResult-m{position: absolute;width: 897px;height: 180px;padding:10px 0px;font-size: 14px;color: #ffe075;font-weight: bold;background:url('../img/resultbg-m.png') no-repeat;top:180px;left:50px;z-index: 999;text-align: center;overflow: hidden;display: none;}
+.ggkResult-m .ggkName{padding:0 15px;height: 45px;}
+.ggkResult-m .box{width: 1770px;height:120px;overflow: hidden;clear: both;}
+.ggkResult-m .box li{float: left;width:177px;margin-top: 30px;}
+.ggkResult-m .box .btn-box{margin-top:5px;}
+.ggkResult-m .box .btn-box .btn{display: inline-block;width: 70px;height: 26px;background-color: #c76505;color: #fff;line-height: 26px;font-size: 14px;margin-top: 10px;border-radius: 5px;}
+.ggkResult-m .pageBtn{position: absolute;bottom: 20px;left: 0px;width: 100%;}
+
+
+
+
+
+/* 导航 */
+.nav{position: fixed;top: 226px;right:10px;width:226px;height: 150px;background: url('../img/nav.png');z-index: 99;overflow: hidden;}
+.nav a{text-indent: -1000px;display: block;height: 35px;width: 100%;margin-bottom: 3px;}
+
+.imgBox .bgbg{width:80px;height:91px; position:absolute; top:211px; left:369px; z-index:1000; display:none;}
+
+.RotareInfo1{position:absolute; top:225px;right:22px; width:220px; height:175px; text-align:center; font: 400 15px/25px '微软雅黑'; color:#ffb7a2; z-index:998;}
+.user-Info1{ background:url(../img/rotateBg2.png) center center no-repeat; width:212px; height:77px; padding-top:20px;}
+.user-Info1 span{ color:#ffcc00;margin-left:5px;}
+.user-Info1 strong{background-color:#c97b67; display:inline-block; width:108px; height:25px; color:#000;}
+.endTimes{background:url(../img/rotateBg1.png) center center no-repeat; width:212px; height:62px; margin-top:15px; line-height:54px;}
+.endTimes strong{color:#ffcc00; font-size:25px; padding:0 4px;}
+
+
+.pImg{ position:absolute; top:865px; left:5px;}
+
+.canvas{position:absolute;width: 480px;height:521px;font-size: 14px;color: #fff;font-weight: bold;background:url('../img/prizebg.jpg') no-repeat;/* top:750px; */top:100px;left:0px;z-index: 999;text-align: center;display: none;}
+.canvas #ieAnimation{display: block;width: 480px;height: 520px;}
+.canvas .draw{position: absolute;top:291px;left: 48px;width: 384px;height: 189px;z-index: 999;}
+
+.surprise{position: relative;}
+.surprise .spBtn{position:absolute;bottom:50px;left:50%;margin-left:-111px;width: 222px;height: 55px;background: url('../img/ggk-icon.png') no-repeat -222px -500px;z-index:999;}
+.surprise .spBtnShow{background-position: -2px -358px;}
+.surprise .nameList{position:absolute;top:40px;right:20px;width: 120px;}
+.surprise .nameList .check{width: 100%;overflow: hidden;}
+.surprise .nameList .check a{display:block;width:81px;height: 28px; background: url('../img/ggk-icon.png') no-repeat -362px -375px;text-indent:-1000px;margin:0 auto;}
+.surprise .nameList .list{text-align: center;line-height: 22px;color: #CB8F8F;background-color: #440202;border: 1px solid #845656;padding: 5px 0;}
+
+.surprise .spBox{width: 410px;height: 307px;position: absolute;top:35px;left: 302px;z-index: 10;background:url('../img/spPrizebg.png') no-repeat;}
+.surprise .spBox .checkLogin,.surprise .draw{position: absolute;left:87px;top: 168px;width: 220px;height: 108px;z-index:998;}
+.surprise .spBox .checkLogin{z-index:1000;background: url('../img/spGift.png') no-repeat;}
