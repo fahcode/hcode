@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>巨人移动-娱乐随行 快乐随心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="keywords" content="巨人,巨人移动,手游,移动,游戏,网游,游戏公司,手游公司,手机游戏公司,游戏中心,游戏平台,手机游戏,手机网游,3D,3D手游,3D网游,iOS游戏,苹果游戏,Android游戏,安卓游戏,中国好舞蹈,中国好舞蹈手游,中国好舞蹈官方手游,游戏发行,手机游戏发行,手机游戏研发,研发,帐号,客服,商务,合作,招聘,iPad,iPhone,iPod touch,Mac,iOS,Android" />
+    <meta name="description" content="“巨人移动”是巨人网络成立手游发行公司，计划将手游业务提升到全新战略高度。主要产品包括《征途口袋版》《大主宰》、《黑猫警长2》、《武极天下》，以及神秘战旗策略类、横版国战类手游（开发中）等，涵盖RPG、卡牌、塔防等多种手游类型，既有巨人自研产品，也有投资、合作开发或从海外引进的精品。" />
+    <!-- 启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!--  QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <link rel="stylesheet" type="text/css" href="css/admin.css"/>
+    <!--<script type="text/javascript" src="js/zepto.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    //全局字体rem
+    (function (size){
+        function fn(){
+            var win_w = parseInt(document.body.clientWidth);
+            win_h = parseInt(document.body.clientHeight),
+            html = document.getElementsByTagName('html')[0],
+            //获取初始的fontsize,16为比例标准
+            originalSize = parseInt((window.getComputedStyle(document.documentElement,null)).fontSize),
+            zoom=(win_w / size) / (originalSize/16) * 100,
+
+            html.style.fontSize = zoom + 'px';
+
+        };
+        fn();
+    })(750);
+</script>
+
+<div class="main setWinHei">
+    <div class="doAudit">
+        <div class="auditImg">
+            <ul class="auditList">
+                <li class="item">
+                    <img src="img/audit1.jpg" alt="">
+                    <div class="cancel no"><span class="tips"></span></div>
+                    <div class="txt">
+                        <div class="userName">黄发辉</div>
+                        <div class="jobNumber">16064</div>
+                    </div>
+                    
+                </li>
+                <li class="item">
+                    <img src="img/audit1.jpg" alt="">
+                    <div class="cancel"><span class="tips"></span></div>
+                </li>
+                <li class="item">
+                    <img src="img/audit1.jpg" alt="">
+                    <div class="cancel"><span class="tips"></span></div>
+                </li>
+                <li class="item">
+                    <img src="img/audit1.jpg" alt="">
+                    <div class="cancel"><span class="tips"></span></div>
+                </li>
+                <li class="item">
+                    <img src="img/audit1.jpg" alt="">
+                    <div class="cancel"><span class="tips"></span></div>
+                </li>
+                <li class="item">
+                    <img src="img/audit1.jpg" alt="">
+                    <div class="cancel"><span class="tips"></span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="submitBox"><a href="" class="auditSubmit">审核通过</a></div>
+    </div>
+    <footer>
+        <div class="auditInfo left">已审核：<span class="isAudit">288</span></div>
+        <div class="auditInfo right">未审核：<span class="noAudit">288</span></div>
+    </footer>
+</div>
+<script type="text/javascript" >
+    $(function(){ 
+        var self = this;
+        var winHei = parseInt($(window).height());
+        $('.setWinHei').css('height',winHei + 'px');
+    })
+</script>
+</body>
+</html>

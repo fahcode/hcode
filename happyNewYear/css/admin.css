@@ -1,0 +1,36 @@
+/* reset */
+*{margin:0;padding:0;border:0;outline: 0;}
+html{overflow-x:auto!important;overflow-x:hidden;overflow-y:auto}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000;}del,ins{text-decoration:none}p{ margin:0; padding:0}img {-ms-interpolation-mode: bicubic;}
+a{ text-decoration:none}
+body{ width:100%; overflow:hidden; font:normal 0.24rem/0.44rem "Microsoft YaHei","微软雅黑"; color:#fff; word-wrap:break-word; word-break:break-all;-webkit-tap-highlight-color:rgba(255,255,255,0); background-color:#fff;/* max-width: 720px; */margin:0 auto;}
+.main{width:100%;height:100%;background:url('../img/bg.jpg') no-repeat center center / 100% 100%;overflow: hidden;position: relative;}
+.logo{width: 4.31rem;height: 2.78rem;background:url('../img/Christmas2.png') no-repeat 0 0 / 100% 100%;margin:1rem auto 0;}
+.inputBox{margin:0.8rem auto 0;width: 4.18rem;overflow: hidden;}
+.inputBox input{display: block;width:100%;line-height: 0.9rem;text-align: center;margin-bottom: 0.25rem;height: 0.9rem;}
+.inputBox .username,.inputBox .pwd{color: #fff;font-size:0.38rem;height: 0.9rem;background-color: #e25c4c;}
+.inputBox .submit{-webkit-appearance:none;color: #e25c4c;font-size:0.38rem;border:0.1rem solid #e25c4c;font-weight:bold;line-height: 0.7rem;}
+
+.doAudit{left:0.35rem;right:0.35rem;height: 100%;position: absolute;overflow: hidden;}
+.auditImg{position: absolute;top:0.25rem;bottom:2.2rem;width: 100%;overflow: hidden;}
+.auditImg .auditList{width: 110%;height:100%;margin-left: -0.2rem;overflow-y:auto;}
+.auditImg .auditList .item{width:3.1rem;height:3.1rem;overflow: hidden;float: left;margin:0 0 0.2rem 0.2rem;border:0.1rem solid #e25c4c;background-color:#e25c4c;position: relative;}
+.auditImg .auditList .item img{width: 100%;height:auto;}
+.auditImg .auditList .txt{font-size:0.3rem;line-height:0.35rem;color:red;bottom: 0.1rem;right:0.2rem;position: absolute;}
+.auditImg .auditList .cancel{width: 0.45rem;height: 0.45rem;top:0.1rem;right:0.1rem;background-color:#e25c4c;position: absolute;}
+.auditImg .auditList .cancel.no{background-color:#000;}
+.auditImg .auditList .cancel .tips{display: block;width: 0.35rem;height: 0.35rem;margin:0.05rem 0 0 0.05rem;background:url('../img/yes.png') no-repeat center center / 100% 100%;}
+.auditImg .auditList .cancel.no .tips{background:url('../img/close.png') no-repeat center center / 0.28rem 0.28rem;}
+
+.submitBox{position: absolute;bottom: 1rem;width:100%;}
+.submitBox .auditSubmit{display: block;border: 0.1rem solid #e25c4c;line-height: 0.8rem;height: 0.8rem;text-align: center;font-size:0.5rem;color: #e25c4c;font-weight: 600;} 
+
+
+footer{position: absolute;left: 0;bottom: 0.35rem;width: 100%;height: 0.38rem;}
+footer .auditInfo,footer .auditInfo>span{font-size: 0.3rem;line-height: 0.38rem;color: #e25c4c;}
+footer .auditInfo{padding:0 0.28rem;}
+footer .left{float: left;}
+footer .right{float: right;}
+
+::-webkit-scrollbar{  
+     width:0px;   //为了测试，用了很大的值  
+}

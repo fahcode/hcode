@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>巨人移动-娱乐随行 快乐随心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="keywords" content="巨人,巨人移动,手游,移动,游戏,网游,游戏公司,手游公司,手机游戏公司,游戏中心,游戏平台,手机游戏,手机网游,3D,3D手游,3D网游,iOS游戏,苹果游戏,Android游戏,安卓游戏,中国好舞蹈,中国好舞蹈手游,中国好舞蹈官方手游,游戏发行,手机游戏发行,手机游戏研发,研发,帐号,客服,商务,合作,招聘,iPad,iPhone,iPod touch,Mac,iOS,Android" />
+    <meta name="description" content="“巨人移动”是巨人网络成立手游发行公司，计划将手游业务提升到全新战略高度。主要产品包括《征途口袋版》《大主宰》、《黑猫警长2》、《武极天下》，以及神秘战旗策略类、横版国战类手游（开发中）等，涵盖RPG、卡牌、塔防等多种手游类型，既有巨人自研产品，也有投资、合作开发或从海外引进的精品。" />
+    <!-- 启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!--  QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.min.css"/>
+    <!--<script type="text/javascript" src="js/zepto.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    //全局字体rem
+    (function (size){
+        function fn(){
+            var win_w = parseInt(document.body.clientWidth);
+            win_h = parseInt(document.body.clientHeight),
+            html = document.getElementsByTagName('html')[0],
+            //获取初始的fontsize,16为比例标准
+            originalSize = parseInt((window.getComputedStyle(document.documentElement,null)).fontSize),
+            zoom=(win_w / size) / (originalSize/16) * 100,
+
+            html.style.fontSize = zoom + 'px';
+
+        };
+        fn();
+        window.onorientationchange = function(){
+            fn();
+        }
+    })(750);
+</script>
+<!-- 通过定位来获取高度(可避免大多数的工具栏影响) -->
+<div class="testHei"><div class="winHei" id="winHei"></div></div>
+<div class="main setWinHei">
+    <div class="music" id="closeMusic" datas="1">
+        <a class="musicBtn"  href="javascript:;">
+            <span class="switch on"></span>
+            <div class="audioBox" id="audioBox" >
+            <!--背景音乐-->
+            <audio id="audioBg" src="music/bg.mp3" preload="preload" autoplay="autoplay" loop="loop"></audio>
+            <!--按钮点击音乐-->
+            <audio id="audioBtn" src="music/btn.mp3" preload="preload"  ></audio>
+            <!--窗口弹出音乐-->
+            <audio id="audioPop" src="music/popbg.mp3" preload="preload"  ></audio>
+            <!--拍照完成音乐-->
+            <audio id="audioPhoto" src="music/photo.mp3" preload="preload"  ></audio>
+            </div>
+        </a>
+    </div>
+    <a class="share shareIn pa" id="share" title="分享" href="javascript:;"></a>
+    <div class="loadingBox bg">
+        <div class="doLoading sign" id="load">
+            <div class="moon pa">
+                <div class="moonImg"></div>
+                <div class="moon_bg pa"></div>
+            </div>
+            <div class="Christmas pa bigIn"></div>
+            <div class="deer pa signIn"></div>
+            <div class="year2015 pa yearIn"></div>
+            <div class="BellList pa fadeIn">
+                <div class="Bell1 tfo50 pa"></div>
+                <div class="Bell2 tfo50 pa"></div>
+                <div class="Bell3 tfo50 pa"></div>
+            </div>
+            <div class="tipsList pa tfo55 fadeIn">
+                <div class="tips1 star_r pa tfo55"></div>
+                <div class="tips2 sock pa tfo55 zoomIn"></div>
+                <div class="tips3 candy pa tfo55"></div>
+                <div class="tips4 star_b pa tfo55"></div>
+                <div class="tips5 snowflake_g pa tfo55"></div>
+                <div class="tips6 club pa tfo55 zoomIn"></div>
+                <div class="tips7 star_r pa tfo55"></div>
+                <div class="tips8 leaf pa tfo55"></div>
+                <div class="tips9 snowflake_g pa tfo55"></div>
+                <div class="tips10 snowflake_r pa tfo55"></div>
+                <div class="tips11 snowman pa tfo55 zoomIn"></div>
+                <div class="tips12 star_g pa tfo55"></div>
+            </div>
+        </div>
+        <div class="planBox">
+            <div class="plan" id="plan"></div>
+            <div class="GIC"></div>
+        </div>
+    </div>
+    <div class="play bg">
+        <div class="bgTips">
+            <div class="bgs1 pa"></div>
+            <div class="bgs2 pa"></div>
+        </div>
+        <div class="column row1">
+            <div class="fn mainView state1 show">
+                <!-- 鹿 -->
+                <div class=" sign">
+                    <div class="moon pa loadShow">
+                        <div class="moonImg"></div>
+                        <!-- <div class="moon_bg pa"></div> -->
+                    </div>
+                    <div class="deer pa signIn"></div>
+                    <div class="Christmas pa"></div>
+                    <div class="year2015 pa"></div>
+                    <div class="BellList pa">
+                        <div class="Bell1 tfo50 pa"></div>
+                        <div class="Bell2 tfo50 pa"></div>
+                        <div class="Bell3 tfo50 pa"></div>
+                    </div>
+                    <div class="tipsList pa tfo55">
+                        <div class="tips1 star_r pa tfo55"></div>
+                        <div class="tips2 sock pa tfo55"></div>
+                        <div class="tips3 candy pa tfo55"></div>
+                        <div class="tips4 star_b pa tfo55"></div>
+                        <div class="tips5 snowflake_g pa tfo55"></div>
+                        <div class="tips6 club pa tfo55"></div>
+                        <div class="tips7 star_r pa tfo55"></div>
+                        <div class="tips8 leaf pa tfo55"></div>
+                        <div class="tips9 snowflake_g pa tfo55"></div>
+                        <div class="tips10 snowflake_r pa tfo55"></div>
+                        <div class="tips11 snowman pa tfo55"></div>
+                        <div class="tips12 star_g pa tfo55"></div>
+                    </div>
+                    <div class="star_r_big pa"></div>
+                    <div class="star_g_big pa"></div>
+                </div>
+                <!-- logo -->
+                <div class="logo logoIn pa"></div>
+            </div>
+            <!-- 填写内容 -->
+            <div class="fn setData state2">
+                <div class="inputBg pa fadeInUpBig fadeOutDownsmall">
+                    <a href="javascript:;" class="close pa" id="inputClose"></a>
+                    <div class="write pa">
+                        <div class="txtBox">
+                            <p class="tit">扫码传照抽奖须知</p>
+                            <p>了解以下几件事，五千元现金大奖等着你：</p>
+                            <p>填写正确的工号与姓名，填错可是要被视为弃权嗒～</p>
+                            <p>在指定的地点拍摄照片，请务必秀出清晰面部哦～</p>
+                            <p>每人只有一次上传机会，照片上传后就不得修改啦～</p>
+                            <p>拍摄后分享至朋友圈，系统菌会自动上传美照嗒～</p>
+                            <p>照片通过后台审核，你就可以参与抽奖啦～</p>
+                            <p>上传截止时间为今晚20:30，赶紧拍起来吧～</p>
+                        </div>
+                        <div class="inputBox">
+                            <form action="">
+                            <div class="inputColumn">
+                            <span class="label">工号</span>
+                            <input type="text" class="jobNumber" placeholder="请输入您的工号"/></div>
+                            <div class="inputColumn"><span class="label">姓名</span><input type="text" class="name" placeholder="请输入您的姓名"/></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 照片预览 -->
+            <div class="fn preview state3">
+                <div class="viewBox pa fadeInUpBig">
+                    <div class="viewBg pa"></div>
+                    <div class="logo pa"></div>
+                    <div class="imgBox">
+                        <img class="photo" src="img/photo1.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="playBtnList pa wobble" id="isTouch">               
+                <a class="item shootBtn pa flip in" href="javascript:;" title="拍摄" datas="1"></a>
+                <a class="item shareBtn pa flip out" href="javascript:;" id="shareBtn" title="确定" datas="2"></a>
+                  
+            </div>
+            <!-- 拍照完成后 -->
+            <div class="overBtnBox pa" id="overBtnBox">
+                <a class="item againBtn wobble" href="javascript:;" title="重拍" ></a>
+                <a class="item saveBtn wobble" href="javascript:;" title="保存分享"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/global.js"></script>
+<script src="http://sapi.ztgame.com/site/js/require.js"></script>
+<script>
+    //校验填写工号和姓名信息
+    function queryEmpno(){
+        var empno = $("#empno").val();
+        var name = $("#name").val();
+        if(empno == '' || empno== '请输入您的真实工号' || !(/^\d{5}$/.test(empno))){
+            alert('请输入您的真实工号');
+            $('#shareBtn').attr('datas',2);
+            return false;
+        }
+        if(name == '' || name== '请输入您的真实姓名'){
+            alert('请输入您的真实姓名');
+            $('#shareBtn').attr('datas',2);
+            return false;
+        }
+        $.get('action.php?a=empnoExist',{'empno':empno},function(rp){
+            if(rp.code == 0){
+                alert(rp.msg);
+                return false;
+            }else{
+                selectPhoto('save');
+            }
+        },'json');
+    }
+    var wx = null;
+    var $$ = null;
+    function selectPhoto(op)
+    {
+        wx.chooseImage({
+            count: 1, // 默认9
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: function (res) {
+                var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                wx.uploadImage({
+                    localId: localIds[0], // 需要上传的图片的本地ID，由chooseImage接口获得
+                    isShowProgressTips: 1, // 默认为1，显示进度提示
+                    success: function (res) {
+                        var empno = $("#empno").val();
+                        var name = $("#name").val();
+                        $.get('action.php?a=save',{'op':op,'media_id':res.serverId,'empno':empno,'name':name},function(rp){
+
+                            //上传成功后分享
+                            var share_url = 'http://'+window.location.hostname+'/happy2015/share.php?op='+rp.openid;
+//                            var img_url = 'http://'+window.location.hostname+rp.smallImg;
+                            var img_url = 'http://common.dev.ztgame.com:9041/'+rp.smallImg;
+
+                            requirejs(["weixin/main",'jquery'], function(weixin,$$) {
+                                window.$ = $$;
+                                var appid = 'wxefefae06f7bfb308';
+                                //wx对像就基本等同于官方的weixin对像，包含所有官网api
+                                wx = new weixin(appid,function(){
+                                    initWX(wx,share_url,img_url);
+                                });
+                            });
+                            //上传成功后分享
+
+                        },'json');
+                        var serverId = res.serverId; // 返回图片的服务器端ID
+                    }
+                });
+
+                $('#view').attr('src',localIds[0]);
+
+                //显示效果
+                $('.state2,.mainView').removeClass('show');
+                $('.state3').addClass('show');
+                $('#share,#overBtnBox').show();
+                $('#isTouch').hide()
+                im.doMusics().doPhoto();
+            }
+        });
+    }
+
+    var share_url = window.location.href;
+    var img_url = 'http://hr.ztgame.com/activity/chunzhao/images/share.jpg';
+    //分享
+    requirejs(["weixin/main",'jquery'], function(weixin,$$) {
+        window.$ = $$;
+        var appid = 'wxefefae06f7bfb308';
+        //wx对像就基本等同于官方的weixin对像，包含所有官网api
+        wx = new weixin(appid,function(){
+            initWX(wx,share_url,img_url);
+        });
+    });
+
+    //朋友圈
+    function initWX(wx,share_url,img_url){
+        wx.ready(function(){
+            wx.onMenuShareTimeline({
+                title: '巨人网络2015年会开启啦！', // 分享标题
+                link: share_url, // 分享链接
+                imgUrl: img_url, // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+
+                },
+                cancel: function () {
+                }
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

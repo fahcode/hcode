@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>巨人移动-娱乐随行 快乐随心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="keywords" content="巨人,巨人移动,手游,移动,游戏,网游,游戏公司,手游公司,手机游戏公司,游戏中心,游戏平台,手机游戏,手机网游,3D,3D手游,3D网游,iOS游戏,苹果游戏,Android游戏,安卓游戏,中国好舞蹈,中国好舞蹈手游,中国好舞蹈官方手游,游戏发行,手机游戏发行,手机游戏研发,研发,帐号,客服,商务,合作,招聘,iPad,iPhone,iPod touch,Mac,iOS,Android" />
+    <meta name="description" content="“巨人移动”是巨人网络成立手游发行公司，计划将手游业务提升到全新战略高度。主要产品包括《征途口袋版》《大主宰》、《黑猫警长2》、《武极天下》，以及神秘战旗策略类、横版国战类手游（开发中）等，涵盖RPG、卡牌、塔防等多种手游类型，既有巨人自研产品，也有投资、合作开发或从海外引进的精品。" />
+    <!-- 启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!--  QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.min.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.2.7.jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    //全局字体rem
+    (function (size){
+        function fn(){
+            var win_w = parseInt(document.body.clientWidth);
+            win_h = parseInt(document.body.clientHeight),
+            html = document.getElementsByTagName('html')[0],
+            //获取初始的fontsize,16为比例标准
+            originalSize = parseInt((window.getComputedStyle(document.documentElement,null)).fontSize),
+            zoom=(win_w / size) / (originalSize/16) * 100,
+
+            html.style.fontSize = zoom + 'px';
+
+        };
+        fn();
+    })(750);
+</script>
+<!-- 通过定位来获取高度(可避免大多数的工具栏影响) -->
+<div class="testHei"><div class="winHei" id="winHei"></div></div>
+<div class="main setWinHei">
+    <div class="music" id="closeMusic" datas="1">
+        <a class="musicBtn"  href="javascript:;">
+            <span class="switch on"></span>
+            <div class="audioBox" id="audioBox" >
+            <!--背景音乐-->
+            <audio id="audioBg" src="music/bg.mp3" preload="preload" autoplay="autoplay" loop="loop"></audio>
+            <!--按钮点击音乐-->
+            <audio id="audioBtn" src="music/btn.mp3" preload="preload"  ></audio>
+            <!--窗口弹出音乐-->
+            <audio id="audioPop" src="music/popbg.mp3" preload="preload"  ></audio>
+            <!--幕布拉开音效-->
+            <audio id="audioPull" src="music/pull.mp3" preload="preload"  ></audio>
+            <!--食物出现音效-->
+            <audio id="audioFoodIn" src="music/foodIn.mp3" preload="preload"  ></audio>
+            </div>
+        </a>
+    </div>
+    <a class="share shareIn pa" id="share2" title="分享" href="javascript:;"></a>
+    <div class="loadingBox bg">
+        <div class="doLoading sign" id="load">
+            <div class="moon pa">
+                <div class="moonImg"></div>
+                <div class="moon_bg pa"></div>
+            </div>
+            <div class="Christmas pa bigIn"></div>
+            <div class="deer pa signIn"></div>
+            <div class="year2015 pa yearIn"></div>
+            <div class="BellList pa fadeIn">
+                <div class="Bell1 tfo50 pa"></div>
+                <div class="Bell2 tfo50 pa"></div>
+                <div class="Bell3 tfo50 pa"></div>
+            </div>
+            <div class="tipsList pa tfo55 fadeIn">
+                <div class="tips1 star_r pa tfo55"></div>
+                <div class="tips2 sock pa tfo55 zoomIn"></div>
+                <div class="tips3 candy pa tfo55"></div>
+                <div class="tips4 star_b pa tfo55"></div>
+                <div class="tips5 snowflake_g pa tfo55"></div>
+                <div class="tips6 club pa tfo55 zoomIn"></div>
+                <div class="tips7 star_r pa tfo55"></div>
+                <div class="tips8 leaf pa tfo55"></div>
+                <div class="tips9 snowflake_g pa tfo55"></div>
+                <div class="tips10 snowflake_r pa tfo55"></div>
+                <div class="tips11 snowman pa tfo55 zoomIn"></div>
+                <div class="tips12 star_g pa tfo55"></div>
+            </div>
+        </div>
+        <div class="planBox">
+            <div class="plan rotateY" id="plan"></div>
+            <div class="GIC"></div>
+        </div>
+    </div>
+    <div class="play bg page2 swiper-container">
+        
+        <div class="swiper-wrapper">
+            <div class="column row1 swiper-slide" >
+                <div class="bgTips">
+                    <div class="bgs1 pa"></div>
+                    <div class="bgs2 pa"></div>
+                </div>
+                <!-- 照片预览 -->
+                <div class="preview ">
+                    <div class="viewBox pa fadeInUpBig">
+                        <div class="viewBg pa"></div>
+                        <div class="logo pa"></div>
+                        <div class="imgBox">
+                            <img class="photo" src="img/photo1.jpg">
+                        </div>
+                    </div>
+                </div>
+                <a class="downTips pa"></a>
+            </div>
+            <div class="column row2 swiper-slide">
+                <div class="bgTips">
+                    <div class="bgs3 pa"></div>
+                    <div class="bgs4 pa"></div>
+                </div>
+                <a class="upTips pa"></a>
+                <div class="state1">
+                    <!-- 鹿 -->
+                    <div class="sign tfo50" >
+                        <div class="moon pa">
+                            <div class="moonImg"></div>
+                            
+                        </div>
+                        <div class="Christmas pa bigIn"></div>
+                        <div class="deer pa signIn"></div>
+                        <div class="year2015 pa yearIn"></div>
+                        <div class="BellList pa fadeIn">
+                            <div class="Bell1 tfo50 pa"></div>
+                            <div class="Bell2 tfo50 pa"></div>
+                            <div class="Bell3 tfo50 pa"></div>
+                        </div>
+                        <div class="tipsList pa tfo55 fadeIn">
+                            <div class="tips1 star_r pa tfo55"></div>
+                            <div class="tips2 sock pa tfo55 zoomIn"></div>
+                            <div class="tips3 candy pa tfo55"></div>
+                            <div class="tips4 star_b pa tfo55"></div>
+                            <div class="tips5 snowflake_g pa tfo55"></div>
+                            <div class="tips6 club pa tfo55 zoomIn"></div>
+                            <div class="tips7 star_r pa tfo55"></div>
+                            <div class="tips8 leaf pa tfo55"></div>
+                            <div class="tips9 snowflake_g pa tfo55"></div>
+                            <div class="tips10 snowflake_r pa tfo55"></div>
+                            <div class="tips11 snowman pa tfo55 zoomIn"></div>
+                            <div class="tips12 star_g pa tfo55"></div>
+                        </div>
+                        <div class="star_r_big pa"></div>
+                        <div class="star_g_big pa"></div>
+                        <div class="wjtx pa"></div>
+                        <div class="grdh pa"></div>
+                    </div>
+                    <!-- 文字 -->
+                    <div class="meetingintroduce pa">
+                        <p>不是赢家不巨头</p>
+                        <p>Work hard . Play harder！</p>
+                        <p>圣诞大“巨”会，</p>
+                        <p>大家一起躁起来吧！</p>
+                    </div>
+                </div>
+                <!-- 节目单 -->
+                <div class="menuBox state2" >
+                    <div class="menuBg pa">
+                        <a href="javascript:;" class="close pa menuClose" id=""></a>
+                        <div class="controlBox pa">
+                            <div class="txtBox pa">
+                                <div class="programMenu"></div>
+                            </div>
+                            <div class="curtainBox pa">
+                                <div class="curtainLeft pa" id="curtainLeft"></div>
+                                <div class="curtainRight pa" id="curtainRight"></div>
+                            </div>
+                            <div class="windowBox pa"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 菜单 -->
+                <div class="menuBox state3" >
+                    <div class="menuBg pa">
+                        <a href="javascript:;" class="close pa menuClose" id=""></a>
+                        <div class="foodBox pa">
+                            <div class="swiperBox pa">
+                                <div class="swiperList swiper-wrapper">
+                                <ul class="txt swiper-slide">
+                                    <li class="tit">主食</li>
+                                    <li>食神炒饭</li>
+                                    <li class="tit">点心</li>
+                                    <li>重乳酪芝士蛋糕</li>
+                                    <li>水果拼盘</li>
+                                    <li class="tit">酒水</li>
+                                    <li>饮料畅饮</li>
+                                    <li>各类酒水</li>
+                                </ul>
+                                <ul class="txt swiper-slide">
+                                    <li class="tit">主菜</li>
+                                    <li>黄油芝士焗龙虾</li>
+                                    <li>手抓小羊排</li>
+                                    <li>蒜蓉粉丝蒸扇贝</li>
+                                    <li>XO酱杏鲍菇松板肉</li>
+                                    <li>白灼广东菜心</li>
+                                    <li class="tit">汤品</li>
+                                    <li>养生虫草花乌鸡汤</li>
+                                    <li>红枣莲子银耳羹</li>    
+                                </ul>
+                                <ul class="txt swiper-slide">
+                                    <li class="tit">前菜</li>
+                                    <li>冷盘组合</li>
+                                    <li class="tit">主菜</li>
+                                    <li>黑椒小牛排</li>
+                                    <li>清蒸青斑鱼</li>
+                                    <li>泰记酱烧状元蹄</li>
+                                    <li>姜葱爆炒膏蟹</li>
+                                    <li>鲍汁白灵菇</li>
+                                </ul>
+                                </div>
+                                <!-- 如果需要分页器 -->
+                                <div class="swiper-pagination pa"></div>
+                            </div>
+                            <div class="tablecloth pa"></div>
+                            <div class="chicken pa"></div>
+                            <div class="food1 pa"></div>
+                            <div class="food2 pa"></div>
+                            <div class="food3 pa"></div>
+                            <div class="food4 pa"></div>
+                            <div class="food5 pa"></div>
+                            <div class="food6 pa"></div>
+                            <div class="food7 pa"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="playBtnList pa" id="menuBtn">
+                    <a class="item programBtn bounce" href="javascript:;" title="节目" datas="1"></a>
+                    <a class="item menuBtn bounce" href="javascript:;" title="菜单" datas="1"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/page.js"></script>
+</body>
+</html>

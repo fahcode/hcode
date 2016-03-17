@@ -1,0 +1,314 @@
+/* reset */
+*{margin:0;padding:0;border:0;outline: 0;}
+html{overflow-x:auto!important;overflow-x:hidden;overflow-y:auto}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000;}del,ins{text-decoration:none}p{ margin:0; padding:0}img {-ms-interpolation-mode: bicubic;}
+a{ text-decoration:none}
+.clear { clear:both; }
+.hide{ display: none;}
+img{ display: block; width: 100%; vertical-align:top;}
+.hidden,a strong, .logo, .navTit em, .cyLogo {text-indent:-5000px; display:block; height:0; font-size:0; line-height:0; overflow:hidden}
+
+body{ width:100%; overflow:hidden; font:normal 0.24rem/0.44rem "Microsoft YaHei","微软雅黑"; color:#fff; word-wrap:break-word; word-break:break-all;-webkit-tap-highlight-color:rgba(255,255,255,0); background-color:#fff;/* max-width: 720px; */margin:0 auto;}
+.pa{position: absolute;}
+.tfo00{transform-origin:0 0;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-ms-transform-origin:0 0;}
+.tfo01{transform-origin:0 100%;-webkit-transform-origin:0 100%;-moz-transform-origin:0 100%;-ms-transform-origin:0 100%;}
+.tfo55{transform-origin:50% 50%;-webkit-transform-origin:50% 50%;-moz-transform-origin:50% 50%;-ms-transform-origin:50% 50%;}
+.tfo50{transform-origin:50% 0;-webkit-transform-origin:50% 0;-moz-transform-origin:50% 0;-ms-transform-origin:50% 0;}
+.close{width:0.64rem;height: 0.62rem;display: block;background:url('../img/close.png') no-repeat center center / 0.32rem 0.31rem;top:0.1rem;right: 0.1rem;z-index: 50;}
+
+/* 获取屏幕高度 */
+.testHei{position:absolute;top:0;left:0;bottom:0;right:0;}
+.testHei .winHei{width: 100%;height: 100%;}
+
+#shareTipsBox{position: absolute;width:100%;height:100%;top:0;left:0;z-index: 999;}
+#shareTipsBox .tipsImg{position:absolute;top:0;left:0;z-index:10;width: 100%;height: 3rem;/* backgroudn:url(); */}
+#shareTipsBox .clBox{width: 100%;height: 100%;background-color: #000;opacity: 0.7;}
+
+.bg{background:url('../img/bg.jpg') no-repeat center center / 100% 100%;}
+.main{width: 100%;position: relative;overflow: hidden;}
+
+
+.downTips{display:block;width:1.07rem;height: 0.32rem;background:url('../img/v2/downTips.png') no-repeat 0 0 / 100% 100%;position: absolute;bottom:0.88rem;left:50%;margin-left:-0.53rem;z-index: 50;animation: touchdown 1s linear infinite;}
+.upTips{display:block;width:1.07rem;height: 0.32rem;background:url('../img/v2/downTips.png') no-repeat 0 0 / 100% 100%;position: absolute;top:0.45rem;left:50%;margin-left:-0.53rem;z-index: 50;animation: touchUp 1s linear infinite;}
+.swiper-wrapper{width: 100%;height:100%;}
+#share{z-index: 1000;display: none;width:1.28rem;height:2.48rem;top:0.25rem;right:0.3rem;background: url('../img/share.png') no-repeat 0 0 / 100% 100%;}
+/* music */
+.music{position:absolute;left: 0.4rem;top:0;width: 0.81rem;height: 1.26rem;overflow: hidden;z-index: 1000;}
+.music .musicBtn{display:block;width:100%;height:100%;background:url('../img/music.png') no-repeat 0 0 / 100% 100%;position: relative;margin-top: -0.7rem;}
+.music .musicBtn span{display: block;width: 0.61rem;height: 0.2rem;background-repeat: no-repeat;background-size: 100% 100%;position: absolute;bottom: 0.22rem;left: 0.1rem;}
+.music .musicBtn .on{background-image: url('../img/on.png');}
+.music .musicBtn .off{background-image: url('../img/off.png');}
+
+/* 鹿标志 */
+.sign{width:6.54rem;height: 8.11rem;position: absolute;z-index: 10;top:0.65rem;left: 50%;margin:0 0 0 -3.27rem;}
+.sign .moon{width: 5.59rem;height: 5.61rem;top:1.95rem;left: 0.45rem;z-index: 10;opacity: 1;visibility: visible;}
+.sign .moon>.moonImg{width: 100%;height: 100%;background:url('../img/loading/moon.png') no-repeat 0 0 / 100% 100%;}
+.sign .moon>.moon_bg{width: 100%;height: 100%;top:0;left:0;background:url('../img/loading/moon_bg.png') no-repeat center center / 100% 100%;}
+.sign .deer_head{width: 4.44rem;height: 5.97rem;top:0;right:0;background:url('../img/loading/deer_head.png') no-repeat 0 0 / 100% 100%;z-index: 11;}
+.sign .deer_leg{width: 2.71rem;height: 3.7rem;bottom:0;left:0.28rem;background:url('../img/loading/deer_leg.png') no-repeat 0 0 / 100% 100%;z-index: 12;}
+.sign .deer{width: 6.33rem;height: 8.11rem;top:0;right:0;background:url('../img/loading/deer.png') no-repeat 0 0 / 100% 100%;z-index: 11;}
+.sign .Christmas{width: 4.31rem;height: 2.78rem;top:3.29rem;left:1.13rem;background:url('../img/loading/Christmas.png') no-repeat 0 0 / 100% 100%;z-index: 13;}
+.sign .year2015{width: 2.23rem;height: 1.14rem;top:5.7rem;left:2.9rem;background:url('../img/loading/year2015.png') no-repeat 0 0 / 100% 100%;z-index: 14;}
+.sign .star_r_big{width:0.69rem;height: 0.75rem;background:url('../img/loading/tipsList/star_r_bg.png') no-repeat 0 0 / 100% 100%;top:0.92rem;left: 1rem;z-index: 17;opacity: 0;visibility: hidden;}
+.sign .star_g_big{width:1rem;height: 0.95rem;background:url('../img/loading/tipsList/star_g_bg.png') no-repeat 0 0 / 100% 100%;bottom: -0.2rem;right: 0rem;z-index: 18;opacity: 0;visibility: hidden;}
+.sign .wjtx{width:2.2rem;height: 0.84rem;background:url('../img/v2/wjtx.png') no-repeat 0 0 / 100% 100%;bottom: -0.1rem;left:50%;margin-left:-1.1rem;z-index: 20;}
+.sign .grdh{width:7rem;height:2.5rem;background:url('../img/v2/grdh.png') no-repeat 0 0 / 100% 100%;bottom: -0.9rem;left:50%;margin-left:-3.5rem;z-index: 19;}
+/* 铃铛 */
+.sign .BellList{width: 1.52rem;height: 1.27rem;top:2.04rem;left:2.64rem;z-index: 15;}
+.sign .BellList .Bell1{width: 0.33rem;height: 1.07rem;top:0.2rem;left: 0;background:url('../img/loading/tipsList/Bell1.png') no-repeat 0 0 / 100% 100%;}
+.sign .BellList .Bell2{width: 0.26rem;height: 0.63rem;top:0.01px;left:0.65rem;background:url('../img/loading/tipsList/Bell2.png') no-repeat 0 0 / 100% 100%;}
+.sign .BellList .Bell3{width: 0.64rem;height: 1.24rem;top:0;left:0.85rem;background:url('../img/loading/tipsList/Bell3.png') no-repeat 0 0 / 100% 100%;}
+/* 小道具 */
+.sign .tipsList{width: 4.03rem;height: 4.9rem;bottom:0.54rem;left:0;z-index: 16;}
+/*设置每种道具的bk-position位置*/
+.sign .tipsList .star_r{width: 0.17rem;height: 0.17rem;background:url('../img/loading/tipsList/star_r.png') no-repeat 0 0 / 100% 100%;}
+.sign .tipsList .star_g{width: 0.17rem;height: 0.17rem;background:url('../img/loading/tipsList/star_g.png') no-repeat 0 0 / 100% 100%;}
+.sign .tipsList .star_b{width: 0.17rem;height: 0.17rem;background:url('../img/loading/tipsList/star_b.png') no-repeat 0 0 / 100% 100%;}
+.sign .tipsList .sock{width: 0.46rem;height: 0.83rem;background:url('../img/loading/tipsList/sock.png') no-repeat 0 0 / 100% 100%;}
+.sign .tipsList .candy{width: 0.35rem;height: 0.38rem;background:url('../img/loading/tipsList/candy.png') no-repeat 0 0 / 100% 100%;}
+.sign .tipsList .snowflake_g{width: 0.32rem;height: 0.37rem;background:url('../img/loading/tipsList/snowflake_g.png') no-repeat 0 0 / 100% 100%;}
+.sign .tipsList .snowflake_r{width: 0.32rem;height: 0.37rem;background:url('../img/loading/tipsList/snowflake_r.png') no-repeat 0 0 / 100% 100%;}
+.sign .tipsList .club{width: 0.77rem;height: 0.60rem;background:url('../img/loading/tipsList/club.png') no-repeat 0 0 / 100% 100%;}
+.sign .tipsList .leaf{width: 0.73rem;height: 0.53rem;background:url('../img/loading/tipsList/leaf.png') no-repeat 0 0 / 100% 100%;}
+.sign .tipsList .snowman{width: 0.69rem;height: 0.72rem;background:url('../img/loading/tipsList/snowman.png') no-repeat 0 0 / 100% 100%;}
+/*设置每种道具的位置和大小*/
+.sign .tipsList .tips1{top:0;left:1.5rem;}
+.sign .tipsList .tips2{top:0.42rem;left: 1.15rem;}
+.sign .tipsList .tips3{top:1.08rem;left: 0.65rem;}
+.sign .tipsList .tips4{top:1.42rem;left: 0.18rem;}
+.sign .tipsList .tips5{top:1.9rem;left: 0.6rem;}
+.sign .tipsList .tips6{top:2.2rem;left: 0rem;}
+.sign .tipsList .tips7{top:2.26rem;left: 1.08rem;}
+.sign .tipsList .tips8{top:3.92rem;left:1.35rem;}
+.sign .tipsList .tips9{top:4.14rem;left: 2.12rem;}
+.sign .tipsList .tips10{top:4.54rem;left: 2.24rem;}
+.sign .tipsList .tips11{top:4.04rem;left: 2.88rem;}
+.sign .tipsList .tips12{top:4.6rem;left:3.86rem;}
+
+
+/****loading页面 *****/
+.loadingBox{width: 100%;height: 100%;position: absolute;top:0;left: 0;z-index: 10;transition:all .5s ease;}
+.doLoading>div,.doLoading .tipsList>div{visibility: hidden;opacity: 0;}
+.doLoading>.loadShow{visibility: visible;opacity: 1;}
+.loadingBox .planBox{position: absolute;left: 50%;bottom:1.25rem;margin-left: -0.975rem;width:1.95rem;overflow: hidden;}
+.loadingBox .planBox .plan{width: 0.84rem;height: 0.26rem;margin:0 auto 0.3rem auto;background-size: 100% 100%;background-repeat: no-repeat;background-position: center center;background-image:url('../img/loading/ld0.png');}
+.loadingBox .planBox .pc20{background-image:url('../img/loading/ld20.png');}
+.loadingBox .planBox .pc40{background-image:url('../img/loading/ld40.png');}
+.loadingBox .planBox .pc60{background-image:url('../img/loading/ld60.png');}
+.loadingBox .planBox .pc80{background-image:url('../img/loading/ld80.png');}
+.loadingBox .planBox .pc100{background-image:url('../img/loading/ld100.png');}
+.loadingBox .planBox .GIC{width: 100%;height: 0.4rem;background:url('../img/GIC.png') no-repeat center center / 100% 100%;}
+
+.play{width: 100%;height: 100%;position: relative;z-index:12;display: none;}
+.bgTips{width: 100%;height: 0;visibility: hidden;}
+.bgTips .bgs1{width:1.22rem;height:1.83rem;background:url('../img/bg_tips1.png') no-repeat 0 0 / 100% 100%;bottom:0.45rem;left:0;}
+.bgTips .bgs2{width:1.99rem;height:2.48rem;background:url('../img/bg_tips2.png') no-repeat 0 0 / 100% 100%;bottom: 0px;right: 0px;}
+.bgTips .bgs3{width:1.55rem;height:3.33rem;background:url('../img/bg_tips3.png') no-repeat 0 0 / 100% 100%;top:0;left:0;}
+.bgTips .bgs4{width:2.05rem;height:4.68rem;background:url('../img/bg_tips4.png') no-repeat 0 0 / 100% 100%;top: 0px;right: 0px;}
+.column,.fn{position: relative;z-index: 10;width: 100%;height: 100%;}
+.fn{position: absolute;opacity: 0;visibility: hidden;}
+.column .show{opacity: 1;visibility: visible;}
+.column .logo{width: 3.18rem;height: 1.8rem;background:url('../img/logo.png') no-repeat 0 0 / 100% 100%;}
+/* 第一个功能状态 */
+.mainView .logo{bottom:2.1rem;left:50%;margin-left:-1.59rem;z-index: 20;opacity: 0;visibility: hidden;}
+/* 第2个功能状态 */
+.setData .inputBg{width: 6.67rem;height: 9.88rem;bottom:1.64rem;left: 50%;margin-left: -3.33rem;background:url('../img/inputBg.png') no-repeat 0 0 / 100% 100%;z-index: 999;}
+.setData .inputBg .close{width:0.64rem;height: 0.62rem;display: block;background:url('../img/close.png') no-repeat center center / 0.32rem 0.31rem;top:0.1rem;right: 0.1rem;}
+.setData .inputBg .write{width: 100%;overflow: hidden;bottom:0.4rem;left: 0;}
+.setData .inputBg .txtBox{width: 6.67rem;padding-bottom:0.26rem;overflow: hidden;margin:0 auto 0.28rem;background:url('../img/hr.png') no-repeat center bottom / 100% 0.04rem;text-align: center;}
+.setData .inputBg .txtBox p{color: #fff;font-size: 0.23rem;line-height: 0.35rem;}
+.setData .inputBg .txtBox .tit{font-size:0.52rem;line-height: 0.65rem;margin-bottom: 0.1rem;}
+.setData .inputBg .inputBox{width: 4.3rem;margin:0 auto;}
+.setData .inputBg .inputColumn{width: 100%;margin-bottom: 0.36rem;overflow: hidden;}
+.setData .inputBox .inputColumn .label{display: inline-block;width:0.9rem;line-height: 0.55rem;background-color: #00a189;font-size:0.32rem;text-align: center;float: left;}
+.setData .inputBox .inputColumn input{display: inline-block;width:3.3rem;line-height: 0.55rem;background-color: #fff;font-size:0.28rem;text-indent:0.1rem;float: left;}
+/* 第3个功能状态 */
+.preview .viewBox{width:4.7rem;height: 6.4rem;padding:1.95rem 0.6rem 1.15rem 0.6rem;left:50%;margin-left:-2.95rem;bottom:1.8rem;}
+.preview .viewBox .viewBg{width:5.9rem;height: 9rem;top:0;left:0;background:url('../img/photoFrame.png') no-repeat center 0 / 100% auto;z-index: 2;}
+.preview .viewBox .logo{bottom: 0px;left:50%;margin-left:-1.59rem;z-index: 5;}
+.preview .viewBox .imgBox{width: 100%;height: 100%;overflow: hidden;}
+.preview .viewBox .imgBox img{width: 100%;height: auto;display: inline-block;vertical-align:middle;}
+
+/* 功能按钮 */
+.column .playBtnList{width: 1.21rem;height: 1.21rem;bottom:0.38rem;left:50%;margin-left:-0.605rem;-webkit-perspective: 1000;perspective: 1000;z-index: 100;}
+.column .playBtnList>div{position: absolute;top:0;left: 0;width: 100%;height: 100%;visibility: hidden;}
+.column .playBtnList>.show{visibility: visible;}
+.column .playBtnList .item{width: 100%;height: 100%;}
+.column .playBtnList .shootBtn{background:url('../img/shootBtn.png') no-repeat 0 0 / 100% 100%;}
+.column .playBtnList .shareBtn{background:url('../img/shareBtn.png') no-repeat 0 0 / 100% 100%;}
+.column .playBtnList .menuBtn{background:url('../img/v2/menuBtn.png') no-repeat 0 0 / 100% 100%;}
+.column .playBtnList .programBtn{background:url('../img/v2/programBtn.png') no-repeat 0 0 / 100% 100%;}
+.column #overBtnBox{display: none;width: 3.4rem;height: 1.21rem;bottom:0.38rem;left:50%;margin-left:-1.7rem;-webkit-perspective: 1000;perspective: 1000;z-index: 100;}
+.column #overBtnBox>.item{display: block;width: 1.21rem;height: 1.21rem;}
+.column #overBtnBox .againBtn{background:url('../img/againBtn.png') no-repeat 0 0 / 100% 100%;float: left;animation:bounce 1s linear 1.4s infinite both;}
+.column #overBtnBox .saveBtn{background:url('../img/saveBtn.png') no-repeat 0 0 / 100% 100%;float: right;animation:bounce 1.1s linear 1s infinite both;}
+/*
+animation: name duration timing-function delay iteration-count direction state;
+		   keyframe名称/动画时间/速度曲线/延迟/次数/轮流反向
+animation-play-state: running | paused;
+					  控制元素动画的播放状态
+animation-fill-mode:none | forwards | backwards | both;	
+					默认/为动画结束时的状态/为动画开始时的状态/为动画结束和开始的状态			
+
+ */
+/* page2页面 */
+.page2{overflow: hidden;display: block;z-index: 8;}
+.page2 .sign{top:0.5rem;transform:scale(0.8,0.8);}
+.page2 .meetingintroduce{width: 6rem;bottom: 2rem;left: 50%;margin-left: -3rem;text-align: center;}
+.page2 .meetingintroduce p{text-indent: 0.2rem;color: #eb6153;font-size: 0.24rem;line-height: 0.35rem;}
+.page2 .playBtnList{text-align: center;width: 6rem;margin-left: -3rem;z-index: 100;}
+.page2 .playBtnList .item{display: inline-block;margin:0 0.45rem;width: 1.21rem;}
+.page2 .state1{position: absolute;width: 100%;height: 100%;top:0;left:0;z-index: 10;}
+.page2 .menuBox{position: absolute;width: 100%;height: 100%;top:0;left:0;z-index: 20;visibility: hidden;opacity: 0;}
+.page2 .state2 .menuBg{width:7.29rem;height: 9.58rem;background:url('../img/v2/menuBg.png') no-repeat 0 0 / 100% 100%;bottom:1.65rem;left: 50%;margin-left:-3.64rem;z-index: 999;}
+.page2 .menuBox .menuBg .close{right:0.42rem;}
+#share2{z-index: 1000;display: none;width:1.28rem;height:2.48rem;top:0.25rem;right:0.3rem;background: url('../img/share2.png') no-repeat 0 0 / 100% 100%;}
+.page2 .preview .viewBox .imgBox{display: none;}
+.animateOk .preview .viewBox .imgBox{display: block;line-height: 6.4rem;}
+
+/* 状态二 */
+.page2 .state2 .controlBox{left:0rem;top:0.3rem;bottom: 0.72rem;right: 0;}
+.page2 .state2 .windowBox{width:7.29rem;height: 8.55rem;top:0;left: 0rem;z-index: 10;background:url('../img/v2/window.png') no-repeat center center / 100% 100%;}
+.page2 .state2 .txtBox{width: 4.3rem;height: 5.1rem;background:url('../img/v2/txtBg.jpg') no-repeat center center;top:2.3rem;left:1.52rem;z-index: 2;}
+.page2 .state2 .txtBox .programMenu{background:url('../img/v2/programMenu.png') no-repeat 0 0 / 100% 100%;width: 100%;height: 100%;visibility: hidden;}
+.page2 .state2 .curtainBox{width: 4.3rem;height: 5.1rem;top:2.3rem;left:1.52rem;z-index: 5;overflow: hidden;}
+.page2 .state2 .txtBox .txtList{width: 50%;margin-top:1.1rem;text-align: left;float: left;}
+.page2 .state2 .txtBox .item{width: 100%;overflow: hidden;margin-bottom: 0.05rem;}
+.page2 .state2 .txtBox .tit,.page2 .state2 .txtBox .txt{width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;color: #fcd68d;font-size: 0.21rem;text-indent: 0.2rem;line-height: 0.3rem;}
+.page2 .state2 .txtBox .tit{font-size:0.28rem;font-size: 0.3rem;font-weight: bold;line-height: 0.4rem;}
+.page2 .state2 .curtainBox>div{width: 50%;height: 100%;background-size: 100% 100%;background-position:center center;top: 0;transition: background-image 1s ease;}
+.page2 .state2 .curtainBox .curtainLeft{background-image:url('../img/v2/curtain/curtain1_l.png');left: 0;}
+.page2 .showMenu .curtainBox .curtainLeft2{background-image: url('../img/v2/curtain/curtain2_l.png');}
+.page2 .state2 .curtainBox .curtainRight{background-image:url('../img/v2/curtain/curtain1_r.png');right: 0;}
+.page2 .showMenu .curtainBox .curtainRight2{background-image: url('../img/v2/curtain/curtain2_r.png');}
+/* 状态三 */
+.page2 .sign .wjtx,.page2 .sign .grdh{visibility: hidden;}
+.page2 .state3 .menuBg{width:6.67rem;height:9.58rem;margin-left:-3.335rem;background: url('../img/v2/foodBg.png') no-repeat 0 0 / 100% 100%;bottom:1.65rem;left: 50%;z-index: 999;}
+.page2 .state3 .menuBg .close{right: 0.2rem;}
+.page2 .state3 .foodBox{width: 100%;height:9.37rem;top: 0;left: 0;overflow: hidden;}
+.page2 .foodBox>div{visibility: hidden;opacity: 0;}
+.page2 .state3 .foodBox .swiperBox{top:2.05rem;left: 0.5rem;width:4.45rem;height:2.6rem;z-index: 10;overflow: hidden;visibility: hidden;}
+.page2 .state3 .foodBox .swiper-pagination{bottom:0rem;right:0rem;width:100%;height:0.2rem;overflow: hidden;z-index: 20;text-align: center;line-height: 0;}
+.page2 .foodBox .swiperBox .swiper-pagination-bullet{width: 0.2rem;height: 0.2rem;display: inline-block;background-color:#760000;margin:0 0.05rem;border-radius: 0.2rem;}
+.page2 .foodBox .swiperBox .swiper-pagination-bullet-active{background-color: #fcd68d;}
+.page2 .state3 .foodBox .swiperList{width:1000%;height: 100%;transition-timing-function:linear;}
+.page2 .state3 .foodBox .txt{width:100%;height:100%;float: left;overflow: hidden;}
+.page2 .state3 .foodBox .txt>li{width:0.3rem;font-size: 0.28rem;line-height: 0.3rem;float: left;margin-right: 0.1rem;word-wrap:break-word;word-break:normal;font-weight: bold;color: #fcd68d;}
+.page2 .state3 .foodBox .txt>.tit{width:0.4rem;font-size: 0.38rem;margin-left:0.3rem;font-weight: bold;line-height: 0.45rem;}
+.page2 .state3 .foodBox .tablecloth{width:5.02rem;height: 5.01rem;left: 0;bottom: 0;background:url('../img/v2//food/tablecloth.png') no-repeat 0 0 / 100% 100%;}
+.page2 .state3 .foodBox .chicken{width:3.08rem;height: 3.45rem;left:0.58rem;bottom: 0.1rem;background:url('../img/v2//food/chicken.png') no-repeat 0 0 / 100% 100%;}
+.page2 .state3 .foodBox .food1{width:1.78rem;height: 3.15rem;left:0rem;bottom: 2.7rem;background:url('../img/v2//food/food1.png') no-repeat 0 0 / 100% 100%;}
+.page2 .state3 .foodBox .food2{width:2.92rem;height: 3.15rem;left:3.35rem;bottom: 1.9rem;background:url('../img/v2//food/food2.png') no-repeat 0 0 / 100% 100%;}
+.page2 .state3 .foodBox .food3{width:2.04rem;height: 2.15rem;right:0rem;bottom: -0.2rem;background:url('../img/v2//food/food3.png') no-repeat 0 0 / 100% 100%;}
+.page2 .state3 .foodBox .food4{width:1.04rem;height: 3.04rem;right:-0.3rem;bottom: 2.5rem;background:url('../img/v2//food/food4.png') no-repeat 0 0 / 100% 100%;}
+.page2 .state3 .foodBox .food5{width:2.11rem;height: 3.15rem;right:-0.3rem;top: 0.68rem;background:url('../img/v2//food/food5.png') no-repeat 0 0 / 100% 100%;}
+.page2 .state3 .foodBox .food6{width:2.95rem;height: 3.15rem;left:2.2rem;top:-1.8rem;background:url('../img/v2//food/food6.png') no-repeat 0 0 / 100% 100%;}
+.page2 .state3 .foodBox .food7{width:2.59rem;height: 3.08rem;left:-0.1rem;top:-0.5rem;background:url('../img/v2//food/food7.png') no-repeat 0 0 / 100% 100%;}
+
+/* 隐藏效果 */
+.opacityHide{transition: all .5s ease;opacity: 0;visibility: hidden;}
+.opacityShow{transition: all .5s ease;opacity: 0;visibility: visible;}
+/* 音乐效果 */
+.music.doAnimate>.musicBtn{animation: musicIn 0.3s linear 0.1s both;}
+
+/* loading 出现效果 */
+.loadShow.moon>.moon_bg{animation: moonIn 2.5s linear 0.5s both;}
+.loadShow.Christmas.bigIn{animation: bigIn 1.5s linear both;}
+.loadShow>.sock.zoomIn{animation: zoomIn 2s linear 0s both;}
+.loadShow.deer{animation: signIn 1s linear both;}
+.loadShow.year2015.yearIn{animation: yearIn 1s linear both;}
+.loadShow.tipsList.fadeIn{animation: fadeIn 1s linear both;}
+.loadShow.BellList{animation: fadeIn 1s linear 0s both;}
+.loadShow.tipsList>.tips1{visibility: visible;opacity:1;animation: fadeIn 1s linear both;}
+.loadShow.tipsList>.tips2{visibility: visible;opacity:1;animation: zoomIn 0.8s linear 0.1s both;}
+.loadShow.tipsList>.tips3{visibility: visible;opacity:1;animation: fadeIn 1s linear 0.2s both;}
+.loadShow.tipsList>.tips4{visibility: visible;opacity:1;animation: fadeIn 1s linear 0.7s both;}
+.loadShow.tipsList>.tips5{visibility: visible;opacity:1;animation: fadeIn 1s linear 0.1s both;}
+.loadShow.tipsList>.tips6{visibility: visible;opacity:1;animation: zoomIn 1s linear 0.4s both;}
+.loadShow.tipsList>.tips7{visibility: visible;opacity:1;animation: fadeIn 1s linear 0.3s both;}
+.loadShow.tipsList>.tips8{visibility: visible;opacity:1;animation: fadeIn 1s linear 0.6s both;}
+.loadShow.tipsList>.tips9{visibility: visible;opacity:1;animation: fadeIn 1s linear 0.5s both;}
+.loadShow.tipsList>.tips10{visibility: visible;opacity:1;animation: fadeIn 1s linear both;}
+.loadShow.tipsList>.tips11{visibility: visible;opacity:1;animation: zoomIn 2s linear 0.6s both;}
+.loadShow.tipsList>.tips12{visibility: visible;opacity:1;animation: fadeIn 1s linear 0.2s both;}
+
+.pc20,.pc40,.pc60,.pc80,.pc100{animation: rubberBand 0.8s linear infinite both;}
+/* 主页面第一屏 */
+/* .page2.animateOk{animation:fadeIn 1s linear both;} */
+/* 星星闪烁 */
+.animateOk .mainView .star_r_big,.animateOk .state1 .star_r_big{visibility: visible;opacity:1;animation: flash 5s linear 1s infinite both;}
+.animateOk .mainView .star_g_big,.animateOk .state1 .star_g_big{visibility: visible;opacity:1;animation: flash 6s linear 0.8s infinite both;}
+.animateOk .mainView .logo.logoIn{visibility: visible;opacity:1;animation:logoIn 2s linear 0.3s both;}
+/* 2.3s后执行其它动画 */
+.animateOk .mainView .logo.bounce,.animateOk .preview .logo.bounce{transform-origin: center bottom;animation:bounce 10s linear infinite both;}
+.animateOk .bgTips{visibility: visible;opacity:1;animation: fadeIn 1s linear 0.2s both;}
+.animateOk .column .playBtnList.wobble{animation:wobble 1s linear 3s infinite both;}
+.animateOk .BellList>.Bell1{animation: swing 2s linear 1s infinite both;}
+.animateOk .BellList>.Bell2{animation: swing 3s linear 1.3s infinite both;}
+.animateOk .BellList>.Bell3{animation: swing 3.5s linear 0.8s infinite both;}
+.swiper-slide-active .programBtn{animation: bounce 1.8s linear 0.2s infinite both;}
+.swiper-slide-active .rotateY{animation: rotateY 1s linear both;}
+
+/* 主页第二屏 */
+.show .fadeInUpBig{animation: fadeInUpBig 1s linear both;}
+.swiper-slide-active .showMenu{visibility: visible;animation:menuPop 1s linear both;}
+.swiper-slide-active .showMenu .curtainLeft2{animation:moveLeft 2s ease 2s both;}
+.swiper-slide-active .showMenu .curtainRight2{animation:moveRight 2s ease 2s both;}
+.swiper-slide-active .showMenu .txtBox .programMenu{animation:fadeIn 1s ease 5s both;}
+/* 主页第三屏 */
+.swiper-slide-active .showMenu .tablecloth{animation:moveIn1 1s ease 1s both;}
+.swiper-slide-active .showMenu .chicken{animation:moveIn2 1s ease 2.5s both;}
+.swiper-slide-active .showMenu .food1{animation:moveIn3 1s ease 3.5s both;}
+.swiper-slide-active .showMenu .food2{animation:moveIn4 1s ease 4s both;}
+.swiper-slide-active .showMenu .food3{animation:moveIn5 1s ease 5s both;}
+.swiper-slide-active .showMenu .food4{animation:moveIn6 1s ease 5s both;}
+.swiper-slide-active .showMenu .food5{animation:moveIn7 1s ease 6s both;}
+.swiper-slide-active .showMenu .food6{animation:moveIn8 1s ease 6.5s both;}
+.swiper-slide-active .showMenu .food7{animation:moveIn9 1s ease 6.5s both;}
+.swiper-slide-active .showMenu .swiperBox{animation:moveIn10 1s ease 6.5s both;}
+.swiper-slide-active .state1 .sign .wjtx{animation:rollIn 1s linear 0.5s both;}
+.swiper-slide-active .state1 .sign .grdh{animation:zoomInUp 1s linear 1s both;}
+
+/* 按钮翻转设置 */
+.in {
+	animation-timing-function: ease-out;
+	animation-duration: 350ms;
+}
+.out {
+	animation-timing-function: ease-in;
+	animation-duration: 225ms;
+}
+.flip {
+	backface-visibility: hidden;
+	transform: translateX(0);/* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
+}
+.flip.out {
+	transform: rotateY(-90deg) scale(.9);
+	animation-name: flipouttoleft;
+	animation-duration: 175ms;
+}
+.flip.in {
+	animation-name: flipintoright;
+	animation-duration: 225ms;
+}
+.rotateY{animation: rotateY 1s linear both;}
+.bounce{animation: bounce 2s linear infinite both;}
+.shareIn{animation: shareIn 1s linear infinite both;}
+
+/* 控制礼包名字大小 尺寸750*/
+.doScale{transform: scale(1,1);}
+@media only screen and (max-width : 480px){
+	.doScale{transform:scale(0.64,0.64);-webkit-transform:scale(0.64,0.64);-moz-transform:scale(0.64,0.64);}
+}
+@media only screen and (max-width : 415px){
+	.page2 .sign{top:1rem;transform:scale(0.8,0.8);}
+	.doScale{transform:scale(0.553,0.553);-webkit-transform:scale(0.553,0.553);-moz-transform:scale(0.553,0.553);}
+}
+@media only screen and (max-width : 375px){
+	.page2 .sign{top:1rem;transform:scale(0.75,0.75);}
+	.doScale{transform:scale(0.5,0.5);-webkit-transform:scale(0.5,0.5);-moz-transform:scale(0.5,0.5);-ms-transform:scale(0.5,0.5);}
+}
+@media only screen and (max-width : 320px){
+	.page2 .sign{top:1rem;transform:scale(0.7,0.7);}
+	.page2 .meetingintroduce{bottom: 2.2rem;}
+	.doScale{transform:scale(0.426,0.426);-webkit-transform:scale(0.426,0.426);-moz-transform: scale(0.426,0.426);}
+}
