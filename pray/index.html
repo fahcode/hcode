@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>考拉大神</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="keywords" content="考拉大神" />
+    <meta name="description" content="考拉大神" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.min.css"/>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> -->
+    <script type="text/javascript" src="js/shake.js"></script>
+    
+</head>
+<body>
+<script type="text/javascript">
+    //全局字体rem
+    (function (size){
+        function fn(){
+        var win_w = parseInt(document.body.clientWidth),
+            win_h = parseInt(document.body.clientHeight),
+            html = document.getElementsByTagName('html')[0],
+            //获取初始的fontsize,16为比例标准
+            originalSize = parseInt((window.getComputedStyle(document.documentElement,null)).fontSize),
+            zoom=(win_w / size) / (originalSize/16) * 100;
+
+            html.style.fontSize = zoom + 'px';
+        };
+        fn();
+        window.onorientationchange = function(){
+            fn();
+        }
+    })(640);
+    var txtArr = {
+        'tit':['嫁给吴彦祖','身价十个亿','摇身变网红','吃遍全地球','没心没肺每一天','生个熊孩子','喝酸奶不舔盖','天天自然醒','疯长二头肌','买下两套房','天天桃花运'],
+        'txt':['颜值高才能嫁男神，快去考拉买面膜！','体验土豪人生，快买考拉轻奢商品！','让自己美美哒，才能当网红嫁天王！','吃货福利，去考拉买美食！','客官，来喝杯酒才痛快！','来考拉买点奶粉给准备着！','来考拉买嚼着的奶片！','来考拉买眼罩，每天好睡眠！','来考拉买保健食品，让你肌肉往外飙','买不起房，买身装甲也成啊！','让自己更美一点，遇见爱情就更多一点']
+    };
+    //随机数0<= v <=(txtArr.tit.length-1)
+    var randomShare = Math.floor(Math.random()*(txtArr.tit.length));
+    var shareTitle = (txtArr.tit)[randomShare];
+</script>
+<div style="display:none"><img src="img/share.jpg" alt="分享显示的封面"/></div>
+<!-- 通过定位来获取高度(可避免大多数的工具栏影响) -->
+<div class="testHei"><div class="winHei" id="winHei"></div></div>
+<div class="main setWinHei">
+    <!-- 背景图 -->
+    <div class="share pa" id="share">
+        <div class="arrow shareIn"></div>
+        <div class="hint">
+            <div class="hintImg"></div>
+            <div class="hintTxt">转发我，让好友也来试试<br>这将负能量清理神器</div>
+        </div>
+    </div>
+    <div class="play" id="play">
+        <div class="bgList pa" id="">
+            <div class="bg1 pa tst bgShow"></div>
+            <div class="bg2 pa tst"></div>
+            <div class="bg3 pa tst"></div>
+        </div>
+        <div class="sunBox pa">
+            <div class="sun loadSun tfo50 " id="loadSun">
+                <div class="loadValue " id="plan">0%</div>
+                <div class="loadTxt pa " id="page3D">
+                    <div class="txt1 tfo51 hover">考拉大神现真身</div>
+                    <div class="txt2 tfo51">专清负能转好运</div>
+                </div>
+            </div>
+            <div class="sun normalSun pa" id="normalSun">
+                <div class="tips3 pa ot0"></div>
+                <div class="tipsTxt txt0 pa">你的负能量已成功清零</div>
+                <div class="result pa">
+                    <div class="tipsTxt txt1">你的2016运势为</div>
+                    <div class="tipsTxt txt2" id="productName">嫁给吴彦祖</div>
+                    <div class="tipsTxt txt3" id="productTxt">颜值高才能嫁男神，快去考拉买面膜！</div>
+                    <div class="productBox">
+                        <div class="productImg img1" id="productImg"></div>
+                        <div class="txt">长按复制代码&nbsp;<span class="em">2016WIN</span></div>
+                        <div class="txt">获得网易考拉海购2016元新年好运福袋</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 云朵 -->
+        <div class="cloud pa ot0"></div>
+        <!-- 动画考拉 -->
+        <div class="animKaola pa tfo10"></div>
+        <div class="kaola pa ">
+            <div class="kaolaImg pa"></div>
+            <!-- 眼睛 -->
+            <div class="eyes pa" id="eyes"></div>
+            <!-- 带子 -->
+            <div class="belt pa"></div>
+            <div class="mouth pa"></div>
+            <!-- 手臂 -->
+            <div class="armList">
+                <div class="arm a1 pa armRotate1">
+                    <div class="goods g1 pa"></div>
+                </div>
+                <div class="arm a2 pa armRotate1">
+                    <div class="goods g2 pa bounce"></div>
+                </div>
+                <div class="arm a3 pa armRotate2">
+                    <div class="goods g3 pa swing1"></div>
+                </div>
+                <div class="arm a4 pa armRotate2">
+                    <div class="goods g4 pa bounce"></div>
+                </div>
+            </div>
+            <!-- 莲灯 -->
+            <div class="lightList" id="lightList">
+                <div class="light l1 tst"></div>
+                <div class="light l2 tst"></div>
+                <div class="light l3 tst"></div>
+            </div>
+        </div>
+        <!-- 符箓 -->
+        <div class="symbolTxtList" id="symbolList">
+            <div class="symbol1 pa"></div>
+            <div class="symbol2 pa"></div>
+            <div class="symbol3 pa"></div>
+            <div class="symbol4 pa"></div>
+            <div class="symbol5 pa"></div>
+            <div class="symbol6 pa"></div>
+            <div class="symbol7 pa"></div>
+            <div class="symbol8 pa"></div>
+        </div>
+        <!-- 小飞蛾 -->
+        <!-- <div class="mothBox">
+            <div class="moth1 pa"><img src="img/moth.gif" alt=""></div>
+            <div class="moth2 pa"><img src="img/moth.gif" alt=""></div>
+        </div> -->
+        <!-- 莲花坐垫 -->
+        <div class="lotusBox pa ot0" id="lotus">
+            <div class="lotusCushion pa"></div>
+            <div class="lotusLight pa tfo51 lotusScale"></div>
+        </div>
+        <!-- 宝箱 -->
+        <div class="chests pa initial" id="">
+            <div class="openTxt">点击打开宝箱</div>
+        </div>
+        <!-- 提示文字 -->
+        <div class="txtList" id="txtList">
+            <div class="tips1 pa ot0">
+                <!-- <div class="txt"></div>
+                <div class="txtBg"></div> -->
+            </div>
+            <div class="tips2 pa ot0">
+                <div class="txt">摇晃屏幕，抖落你2015年身上的负能量！</div>
+                <div class="txtBg"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="music" id="closeMusic" datas="1">
+        <!--背景音乐-->
+        <audio id="audioBg" src="music/bg.mp3" preload="preload" autoplay="autoplay" loop="loop"></audio> 
+        <!--按钮点击音乐-->
+        <audio id="audioBtn" src="music/btn.mp3" preload="preload"  ></audio>
+        <!--考拉出现音乐-->
+        <audio id="kaolaAni" src="music/kaolaAni.mp3" preload="preload"  ></audio>
+        <!-- 摇一摇音效 -->
+        <audio id="shakeAudio" src="music/yaoyiyao.mp3" preload="preload"  ></audio>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/global.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
+<script>
+(function(){
+    var shareData = {
+        'share_url':window.location.href,
+        'title':'我的2015负能量成功清零，新的一年' + shareTitle,
+        'desc':'2015整年的负能量，大神都帮我转成了新年好运，真的好灵啊，你也来试试吧！',
+        'imgUrl':'http://h5.becomingjenny.net/Koala2016-yd/img/share.jpg'
+    }
+    function weixinShare(signPackage){
+        wx.config({
+            debug: false, 
+            appId: signPackage.appId, // 必填，公众号的唯一标识
+            timestamp: signPackage.timestamp, 
+            nonceStr: signPackage.nonceStr,
+            signature: signPackage.signature,// 必填，签名，见附录1
+            jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage']
+        });
+        wx.ready(function (res) {
+            //分享到朋友圈
+            wx.onMenuShareTimeline({
+                title: shareData.title, // 分享标题
+                link: shareData.share_url, // 分享链接
+                imgUrl: shareData.imgUrl, // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            wx.onMenuShareAppMessage({
+                title: shareData.title, // 分享标题
+                desc: shareData.desc, // 分享描述
+                link: shareData.share_url, // 分享链接
+                imgUrl: shareData.imgUrl, // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        }); 
+        wx.error(function (res){
+         console.log(res.errMsg);
+        });
+    }
+
+    //获取jssdk数据
+    $.getJSON('getSign.php?url=' + shareData.share_url,function(signPackageData){
+        weixinShare(signPackageData);
+    });
+})();
+</script>
+
+</body>
+</html>
