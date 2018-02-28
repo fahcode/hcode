@@ -1,0 +1,70 @@
+html, body, #fast{
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+#fast{
+    height: 190px;
+    padding-bottom: 40px;
+    vertical-align: middle;
+    font-size: 0;
+}
+#fast:before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    vertical-align: middle;
+}
+.reg-body{
+    display: inline-block;
+    width: 100%;
+    margin-left: -1px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+.row{
+    height: 36px;
+    line-height: 36px;
+}
+.row{
+    border: 1px solid #d4d4d4;
+    margin-bottom: -1px;
+}
+.row .sub{
+    display: none;
+}
+.row .input-wrap{
+    background-color: transparent;
+    background: none\0;
+    *background: none;
+}
+.row-agree{
+    text-align: left;
+    margin: 6px 0;
+}
+.row-reg.button-wrap{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+}
+.button-wrap .button-one{
+    height: 40px;
+    line-height: 40px;
+}
+.button-wrap .button-one:hover{
+}
+
+
+.row-drag-captcha{
+    background-color: #e8e8e8;
+}
+.captcha-wrap{
+    left: 0;
+}
+
+
+@media only screen and (max-width: 420px){
+}
