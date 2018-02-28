@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>球球大作战</title>
+    <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <link rel="stylesheet" type="text/css" href="res/css/style.css">
+</head>
+<body style="padding:0; margin: 0; background: #000;">
+<canvas id="gameCanvas" width="800" height="450"></canvas>
+<!--main-->
+
+<!--横屏提示和debug start-->
+<div id="heng"><p>竖屏更好玩</p></div>
+<div id="loading">
+    <div class="loader">
+        <div class="loader-inner ball-scale">
+          <div></div>
+        </div>
+    </div>
+</div>
+<div id="overlay"></div>
+<div id="debug"></div>
+<!--end-->
+
+<!--弹窗-->
+<div class="share_tip">
+    <div class="black_bg"></div>
+    <img width="41" height="141" src="res/jt2.png">
+    <p>点击右上方按钮<br/>分享到朋友圈</p>
+</div>
+
+
+
+<div class="cover" id="menu_cover">
+    <h2 class="title"><span class="sheep"></span>是否返回首页</h2>
+    <div class="content">
+        <div class="content_inner">
+            <a href="javascript:void(0);" class="confirm origan_btn" onclick="return false;">继续游戏</a>
+            <a href="javascript:void(0);" class="go_home green_btn" onclick="return false;">返回主菜单</a>
+        </div>
+    </div>
+</div>
+
+<div class="cover" id="game_intro">
+    <a class="close" href="javascript:void(0);" onclick="return false;"></a>
+    <h2 class="title"><span class="sheep"></span>游戏说明</h2>
+    <div class="content">
+        <div class="content_inner">
+            <div class="scroller">
+                <span class="item">活动时间</span>
+                <p>2015.12.21-2015.12.31</p>
+                <span class="item">活动介绍</span>
+                <p>活动期间，用户通过微信转发，即有机会获得年终大奖。</p>
+                <span class="item">活动奖励</span>
+                <p>iPhone6一台</p> 
+                <span class="item">活动规则</span>
+                <p class="list">1）活动期间，游戏次数不限。</p>
+                <p class="list">2）击中“拿红包的征途兔”获得分数，游戏继续；
+     几种“手无寸铁的征途兔”，游戏结束；</p>
+                <p class="list">3）游戏结束后，将成绩分享出去即有机会获得奖励；</p>
+                <p class="list">在法律允许的范围内本次活动最终解释权归巨人网络所有。
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cover get_price" id="get_price">
+    <a class="close" href="javascript:void(0);" onclick="return false;"></a>
+    <h2 class="title"><span class="sheep"></span>领取奖励</h2>
+    <div class="content">
+        <div class="content_inner">
+            <div class="scroller">
+                <p>您目前的最高得分：<span class="stress score_total">0</span></p>
+                <p>您的领奖手机号：<span class="stress user_phone"></span></p>
+                <p>请正确填写手机号码，以便奖励顺利发放！</p>
+                <a class="button button1 palyagin" href="javascript:void(0);" onclick="return false;">开始游戏</a><a class="button button2 sharebtn" href="javascript:void(0);" onclick="return false;">分享好友</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cover no_score" id="no_score">
+    <a class="close" href="javascript:void(0);" onclick="return false;"></a>
+    <h2 class="title"><span class="sheep"></span>领取奖励</h2>
+    <div class="content">
+        <div class="content_inner">
+            <div class="scroller">
+                <p>游戏成绩惨不忍睹啊，</p>
+                <p>你是放跑了多少只手表啊……</p>
+                <a class="button button1 palyagin" href="javascript:void(0);" onclick="return false;">再玩一次</a><a class="button button2 sharebtn" href="javascript:void(0);" onclick="return false;">分享好友</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="res/js/mobiledebug.js"></script>
+<script src="res/js/zepto.js"></script>
+<script src="res/js/iscroll.js"></script>
+<script src="res/js/index.js"></script>
+<script src="res/js/TweenMax.min.js"></script>
+<script src="frameworks/cocos2d-html5/CCBoot.js"></script>
+<script src="main.js"></script>
+<script type="text/javascript">
+    var phonenum = "";//记录用户手机号
+    function gameLoaded()//游戏加载完毕回调函数
+    {
+        //showPhoneInput();
+        //cover.show($("#gameover"));
+    }
+    function gamestart(){//游戏开始回调函数
+        
+    };
+    function gameover(score){//游戏结束回调函数会传最后的得分
+        cover.show($("#menu_cover"));
+    };
+    function myPrizes(){//点击底部我的宝库回调
+        cover.show($("#treasure"));
+    };
+    function showPhoneInput()
+    {
+        cover.show($("#phone_cover"));
+    }
+</script>
+<script type='text/javascript' src='http://js.ztgame.com/stat.js?gametype=5078&eletype=2'></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258731590'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D1258731590' type='text/javascript'%3E%3C/script%3E"));</script>
+<!--main-->
+</body>
+</html>

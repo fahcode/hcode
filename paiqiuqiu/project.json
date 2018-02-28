@@ -1,0 +1,23 @@
+{
+    "project_type": "javascript",
+    "debugMode" : 1,
+    "showFPS" : false,
+    "frameRate" : 60,
+    "id" : "gameCanvas",
+    "renderMode" : 0,
+    "engineDir":"frameworks/cocos2d-html5",
+    "noCache":true,
+    "modules" : ["cocos2d","chipmunk"],
+    "jsList" : [
+        "src/resource.js",
+        "src/Start.js",
+        "src/Config.js",
+        "src/Game.js",
+        "src/Drawer.js",
+        "src/Qiuqiu.js",
+        "src/Fist.js",
+        "src/app.js",
+        "src/Music.js",
+        "src/World.js"
+    ]
+}
