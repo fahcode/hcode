@@ -1,0 +1,23 @@
+{
+  "name": "zpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "zpm": "./bin/zpm.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.11.0",
+    "cwd": "^0.10.0",
+    "file-read": "^1.0.3",
+    "inquirer": "^3.3.0",
+    "read-json-sync": "^2.0.0",
+    "shelljs": "^0.7.8"
+  }
+}
