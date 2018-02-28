@@ -7,8 +7,7 @@
 ![Image][1]
 
 ##3 运行项目
-3.1 可以选择浏览器和模拟器运行项目
-[example link](http://hfhleo.github.io/BasketBall/build/web-mobile/index.html)
+3.1 可以选择浏览器和模拟器运行项目[地址](http://hfhleo.github.io/BasketBall/build/web-mobile/index.html)
 
 ![Image][2]
 
