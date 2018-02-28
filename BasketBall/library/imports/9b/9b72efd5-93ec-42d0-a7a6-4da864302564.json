@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dribble",
+    "texture": "b738e6fa-9354-4181-8248-f6689aa6827b",
+    "atlas": "",
+    "rect": [
+      47,
+      386,
+      1791,
+      1792
+    ],
+    "offset": [
+      18.5,
+      -193
+    ],
+    "originalSize": [
+      1848,
+      2178
+    ]
+  }
+}

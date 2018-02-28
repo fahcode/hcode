@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "slogan",
+    "texture": "8aedf600-e3b3-430d-bdde-e218e0b1f5c4",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      624,
+      406
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      624,
+      406
+    ]
+  }
+}

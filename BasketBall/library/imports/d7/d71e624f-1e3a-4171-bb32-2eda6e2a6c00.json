@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "backBtn",
+    "texture": "f71f48d5-7143-4f48-98f6-a6e365bc40ff",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      496,
+      85
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      496,
+      85
+    ]
+  }
+}

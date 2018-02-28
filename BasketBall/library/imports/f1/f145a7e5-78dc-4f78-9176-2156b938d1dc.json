@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "orderBtn",
+    "texture": "f471cf01-2792-4a70-a9f7-50594c62b00b",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      496,
+      85
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      496,
+      85
+    ]
+  }
+}

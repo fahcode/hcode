@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sharetips",
+    "texture": "5c6959d4-e263-4fff-beac-53fb1b379597",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      489,
+      285
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      489,
+      285
+    ]
+  }
+}
