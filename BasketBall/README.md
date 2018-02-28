@@ -12,5 +12,5 @@
 ![Image][2]
 
 
-[1]: /imgs/ball1.png
-[2]: /imgs/ball2.png
+[1]: /BasketBall/imgs/ball1.png
+[2]: /BasketBall/imgs/ball2.png
