@@ -16,30 +16,30 @@ const Setting = {
 				},
 				p: {
 					text: '简单的pc端模版--默认带有初始化css、统计代码',
-					url: "git.dev.ztgame.com/sites/mytest.git",
+					url: "git.dev.ztgame.com/sites/pc.git",
 					build: 'gulp'
 				},
 				m: {
 					text: '简单的移动端webpack模版--默认带有remjs、sass、统计代码、热更新',
-					url: "git.dev.ztgame.com/sites/yueyuanzhiye.git",
+					url: "git.dev.ztgame.com/sites/webpack.git",
 					build: 'webpack',
 					ism: true, //是否移动端
 				},
 				x: {
 					text: '响应式的gulp模版--默认带有remjs、sass、统计代码、热更新',
-					url: "git.dev.ztgame.com/sites/ts.git",
+					url: "git.dev.ztgame.com/sites/x-gulp.git",
 					build: 'gulp',
 					ism: true,
 				},
 				v: {
 					text: 'vue模版--默认带有remjs、sass、统计代码、热更新、路由、vuex',
-					url: "git.dev.ztgame.com/sites/zt3.git",
+					url: "git.dev.ztgame.com/sites/vue-webpack.git",
 					build: 'webpack',
 					ism: true
 				},
 				r: {
 					text: 'react模版--默认带有remjs、sass、统计代码、热更新、路由、redux',
-					url: "git.dev.ztgame.com/leo/pc-gulp.git",
+					url: "git.dev.ztgame.com/leo/react-webpack.git",
 					build: 'webpack',
 					ism: true
 				}
