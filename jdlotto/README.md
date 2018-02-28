@@ -7,7 +7,8 @@
 2.使用了手机陀螺仪可以移动位置而移动页面
 
 [http://hfhleo.github.io/jdlotto/](http://hfhleo.github.io/jdlotto/)
-![Image][/jdlotto/imgs/jl1.png]
+
+![Image](/jdlotto/imgs/jl1.png)
 
 > 图片特别多，加载比较慢
 
