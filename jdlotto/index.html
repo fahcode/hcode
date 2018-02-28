@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="Keywords" content="重返《街篮》，预约3V3篮球真竞技手游，100%赢大奖。">
+    <meta name="Description" content="还原经典，火爆操作，3V3篮球真竞技手游《街篮》预约赢大奖。">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="css/mstyle.css" type="text/css" rel="stylesheet" />
+    <title>重返《街篮》，预约抽奖</title>
+    <script>
+    	//声明_czc对象:
+        var _czc = _czc || [];
+        _czc.push(["_setAccount", "1255437818"]);
+    </script>
+    <script src="http://act.jl.web.ztgame.com/eruda/console.js"></script>
+    <script src="lib/css3d.min.js"></script>
+    <script src="lib/jstween.js"></script>
+    <script src="lib/jstimeline.js"></script>
+    <script src="lib/orienter.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/img.js"></script>
+    <script src="lib/imagesloaded.js"></script>
+    <script src="http://sapi.ztgame.com/site/js/require.js"></script>
+	
+    <script type="text/javascript">
+        //全局字体rem
+        (function(size) {
+            //获取初始的fontsize,16为比例标准
+            var originalSize = parseInt((window.getComputedStyle(document.documentElement, null)).fontSize);
+            function fn() {
+                var win_w = parseInt(document.documentElement.clientWidth);
+                /* 对应页面对大宽度设置size */
+                //win_w = (win_w>size)?size:win_w;
+                var html = document.getElementsByTagName('html')[0],
+                        zoom = (win_w / size) / (originalSize / 16) * 100;
+                html.style.fontSize = zoom + 'px';
+            };
+            fn();
+
+        })(640);
+
+    </script>
+</head>
+
+<body>
+<div class="loading_bg" id="loading_bg">
+    <div class="loading_logo"><div class="imgbox  loading-anm"><img src="images/preload/logo.png" /></div></div>
+    <div class="loading_text" id="loading_text">加载中...</div>
+</div>
+
+<div id="scene"></div>
+<audio id="bgm" src="images/flexin.mp3" loop preload></audio>
+<div class="music pause"></div>
+<script src="js/app.js"></script>
+
+
+<!--碎片-->
+<div class="commondots cdots" style="display:none">
+    <i class="cdot cdot1 start"></i>
+    <i class="cdot cdot2 start"></i>
+    <i class="cdot cdot3 start"></i>
+    <i class="cdot cdot4 start"></i>
+    <i class="cdot cdot5 start"></i>
+    <i class="cdot cdot6 start"></i>
+    <i class="cdot cdot7 start"></i>
+    <i class="cdot cdot8 start"></i>
+    <i class="cdot cdot9 start"></i>
+    <i class="cdot cdot10 start"></i>
+    <i class="cdot cdot11 start"></i>
+</div>
+
+<!--普通弹窗-->
+<div class="pop_container pop_intro pop_intro01" style="display:none">
+    <a class="close_btn intro01_close" href="javascript:;"></a>
+</div>
+
+<div class="pop_container pop_intro pop_intro02" style="display:none">
+    <a class="close_btn intro02_close" href="javascript:;"></a>
+</div>
+
+<div class="pop_container pop_intro pop_intro03" style="display:none">
+    <a class="close_btn intro03_close" href="javascript:;"></a>
+</div>
+
+<div class="pop_container pop_intro pop_intro04" style="display:none">
+    <a class="close_btn intro04_close" href="javascript:;"></a>
+</div>
+
+
+
+<!--抽奖弹窗-->
+<div class="pop_cj" style="display:none">
+    <a class="logo ht1" href="javascript:;" title="街头篮球">街头篮球</a>
+    <h1 class="slogan ht1" title="iPhone7 火速派送 参与100%中奖">iPhone7 火速派送 参与100%中奖</h1>
+    <a class="cj_btn start" href="javascript:;" title="点击抽奖"><i></i></a>
+    <div class="dots">
+        <i class="dot dot1"></i>
+        <i class="dot dot2 start"></i>
+        <i class="dot dot3 start"></i>
+        <i class="dot dot4 start"></i>
+        <i class="dot dot5 start"></i>
+        <i class="dot dot6 start"></i>
+        <i class="dot dot7 start"></i>
+        <i class="dot dot8 start"></i>
+        <i class="dot dot9 start"></i>
+        <i class="dot dot10 start"></i>
+        <i class="dot dot11 start"></i>
+    </div>
+    <div class="btm">
+        <a class="video_btn" href="javascript:;"></a>
+        <a class="share_btn" href="javascript:;"></a>
+    </div>
+    <a class="closePop cj_close" href="javascript:;"></a>
+</div>
+
+<!--半透明遮罩层-->
+<i class="overlay" style="display:none"></i>
+<!--点击抽奖按钮后 弹出填写信息与遮罩层-->
+<div class="pop_container pop_info" style="display:none;">
+    <i class="pop_logo"></i>
+    <div class="titrow">已预约<i></i>位用户</div>
+    <div class="subtit">填写以下信息领取奖励</div>
+    <div class="formrow">
+        <label>姓名</label>
+        <input class="name" type="text" placeholder="请输入真实姓名">
+    </div>
+    <div class="formrow">
+        <label>手机</label>
+        <input class="phone" type="text" placeholder="请输入11位手机号">
+    </div>
+    <div class="formrow">
+        <input type="text" class="yzm" placeholder="填写验证码">
+        <a class="yzmbtn getcode" href="javascript:;" style="display:block">点击获取验证码</a>
+        <p class="yzmbtn countdown" style="display:none">(<em class="cnum">59</em>)后重新获取</p>
+    </div>
+    <a class="unlock_btn getgift" href="javascript:;" title="解锁奖励"></a>
+    <a class="close_btn info_close" href="javascript:;"></a>
+</div>
+
+
+<!--点击填写信息 解锁奖励 按钮以后，弹出获得的奖品-->
+<div class="pop_container pop_gift" style="display:none;">
+    <i class="pop_logo"></i>
+    <div class="titrow">恭喜您获得<i></i></div>
+    <div class="subtit">您是第<i>XXXXX</i>位预约成功的用户</div>
+    <div class="gift"></div>
+    <em class="tip" style="display:block"></em>
+    <!--<em class="tip2">礼包码：SADKLJASASLIDFJALSDJF</em>-->
+    <div class="btnwrap">
+        <a class="btn btn_l" href="http://jl.ztgame.com/m/" title="官网"></a>
+        <a class="btn btn_r invite" href="javascript:;" title="邀好友抽奖"></a>
+    </div>
+    <div class="subtit2">分享朋友圈<i>可获得一次额外</i>抽奖机会</div>
+    <a class="close_btn gift_close" href="javascript:;"></a>
+</div>
+
+<!--分享朋友圈提示层-->
+<div class="pop_share" style="display:none">
+    <i class="bbg"></i>
+    <i class="arrow"></i>
+    <a class="closePop share_close" href="javascript:;"></a>
+</div>
+
+
+<!--视频-->
+<script type="text/javascript" src="js/cj.js"></script>
+<script type="text/javascript" src="js/popupvideo.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //视频弹窗
+        var vid=document.getElementById("movie0");
+        $('.btm').on('click','.video_btn',function(){
+			_czc.push(["_trackEvent", "重返《街篮》，预约抽奖h5", "播放视频", "用户观看了视频"]);
+            ROC.playVideo('http://videogame.ztgame.com.cn/jl/20161018/1018-147677530516.mp4');
+            $("#bgm")[0].pause();
+            $('.music').addClass("pause");
+        });
+
+    })
+	//$('.pop_cj .start').click();
+
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255437818'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D1255437818' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>
