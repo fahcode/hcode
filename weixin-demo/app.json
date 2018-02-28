@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/2048game/index",
+    "pages/game1/index",
+    "pages/game2/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "2048小游戏",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/2048game/index",
+        "iconPath": "images/wechat.png",
+        "selectedIconPath": "images/wechatHL.png",
+        "text": "2048"
+      },
+      {
+        "pagePath": "pages/game1/index",
+        "iconPath": "images/wechat.png",
+        "selectedIconPath": "images/wechatHL.png",
+        "text": "贪吃蛇"
+      },
+      {
+        "pagePath": "pages/game2/index",
+        "iconPath": "images/wechat.png",
+        "selectedIconPath": "images/wechatHL.png",
+        "text": "游戏2"
+      }
+    ]
+  }
+}
