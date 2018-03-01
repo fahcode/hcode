@@ -8,24 +8,19 @@ import { Router, Route, hashHistory, Link, IndexRoute, Redirect, useRouterHistor
 //import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import { syncHistory, routeReducer } from 'redux-simple-router'
 
-import Style from "../css/index.scss";
+import Style from "./assets/css/index.scss";
 // 所有创建 store 的具体代码在 ./Redux.js 中
-import reducerss from './reducerss'
-const req = require.context("../images", true, /^\.\/.*\.png$/);
+import reducerss from './redux/reducerss'
+const req = require.context("./assets/images", true, /^\.\/.*\.png$/);
 
 import Home from './Components/Home'
 import Index from './Components/Index'
 import Info from './Components/Info'
 import Prizelog from './Components/Prizelog'
 
-
-const reduxRouterMiddleware = syncHistory(hashHistory)
-//添加中间件
-const createStoreWithMiddleware = applyMiddleware(reduxRouterMiddleware)(createStore)
 //创建store
-const store = createStoreWithMiddleware(reducerss)
-// Required for replaying actions from devtools to work 
-//reduxRouterMiddleware.listenForReplays(store)
+const store = createStore(reducerss);
+
 
 /////////////分段加载导致页面加载卡顿，所以去掉分段加载
 /*路由设置*/ 
@@ -83,7 +78,7 @@ ReactDOM.render((
 ), document.getElementById('app'));*/
 
 
-ReactDOM.render((
+ReactDOM.render( (
   <Provider store={store}>
       <Router history={hashHistory}> 
         <Route path="/" component={Home}>
@@ -94,7 +89,7 @@ ReactDOM.render((
         </Route>
       </Router>
   </Provider>
-), document.getElementById('app'));
+), document.getElementById('app') );
 
 //////////////添加assign方法兼容
 if (typeof Object.assign != 'function') {

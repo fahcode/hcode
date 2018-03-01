@@ -36,7 +36,7 @@ const Resource = {
     }
 }
 
-Resource.imgReq = require.context("../images", true, /^\.\/.*\.png||.jpg||.mp4$/);
+Resource.imgReq = require.context("../assets/images", true, /^\.\/.*\.png||.jpg||.mp4$/);
 
 
 export default Resource;

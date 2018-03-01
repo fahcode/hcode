@@ -4,11 +4,11 @@ import { Router, Route, hashHistory, Link} from 'react-router';
 import { connect } from 'react-redux'
 import 'whatwg-fetch'
 
-import Resource from '../Resource';
-import Tool from '../Tool';
+import Resource from '../config/Resource';
+import Tool from '../module/Tool';
 import DrawPan from './DrawPan';
 
-import { cgUserData } from '../actions'
+import { cgUserData } from '../redux/actions'
 
 class Index extends Component {
     constructor(props) {
@@ -51,20 +51,3 @@ const mapStateToProps = (state) => {
 const ConnectedIndex = connect(mapStateToProps)(Index)
 
 export default ConnectedIndex
-
-
-/*fetch(Resource.AjaxUrls.userinfo,{
-            method:'GET',
-            headers: { 
-                'Accept': 'application/json',
-                'Content-Type': 'application/json' 
-            }
-        })
-        .then((response) => response.json())
-        .then((responseJson) => {
-        console.log(responseJson)
-        })
-        .catch((error) => {
-        console.error(error);
-        })
-        .done();*/

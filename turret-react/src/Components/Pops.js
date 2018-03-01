@@ -2,12 +2,12 @@
 import React, { Component } from 'react';
 import { Router, Route, hashHistory, Link} from 'react-router';
 import { connect } from 'react-redux'
-import Resource from '../Resource';
-import Tool from '../Tool';
-import jQueryRotate from '../jQueryRotate';
-import drawLottery from '../drawLottery';
+import Resource from '../config/Resource';
+import Tool from '../module/Tool';
+import jQueryRotate from '../module/jQueryRotate';
+import drawLottery from '../module/drawLottery';
 
-import { cgUserData } from '../actions'
+import { cgUserData } from '../redux/actions'
 
 class Pops extends Component {
     constructor(props) {

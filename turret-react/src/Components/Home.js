@@ -1,12 +1,12 @@
 'use strict'
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import Tool from '../Tool';
+import Tool from '../module/Tool';
 
 import Pops from './Pops';
-import Resource from '../Resource';
+import Resource from '../config/Resource';
 
-import { cgUserData } from '../actions'
+import { cgUserData } from '../redux/actions'
 
 
 class Home extends Component {

@@ -1,14 +1,14 @@
 'use strict'
 import React, { Component } from 'react';
-import Resource from '../Resource';
-import jQueryRotate from '../jQueryRotate';
-import drawLottery from '../drawLottery';
+import Resource from '../config/Resource';
+import jQueryRotate from '../module/jQueryRotate';
+import drawLottery from '../module/drawLottery';
 import { connect } from 'react-redux'
 
-const imgReq = require.context("../../images", true, /^\.\/.*\.png||.jpg||.mp4$/);
+const imgReq = require.context("../assets/images", true, /^\.\/.*\.png||.jpg||.mp4$/);
 
-import Tool from '../Tool';
-import { cgUserData } from '../actions'
+import Tool from '../module/Tool';
+import { cgUserData } from '../redux/actions'
 
 var look = false;
 

@@ -1,8 +1,8 @@
 'use strict'
 import React, { Component } from 'react';
 import { Router, Route, hashHistory, Link} from 'react-router';
-import Resource from '../Resource';
-import Tool from '../Tool';
+import Resource from '../config/Resource';
+import Tool from '../module/Tool';
 
 
 class Info extends Component {

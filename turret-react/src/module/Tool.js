@@ -1,6 +1,6 @@
 'use strict'
 
-import Resource from "./Resource";
+import Resource from "../config/Resource";
 
 const Tool = {
     init: function() {

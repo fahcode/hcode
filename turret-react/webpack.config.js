@@ -21,8 +21,9 @@ var plugins = [
     //html插件
     new HtmlWebpackPlugin({
         title: "【仙侠世界2】 大转盘 送福利",
-        template: "index.html",
-        filename: "main.php",
+        template: "./src/index.html",
+        filename: "index.html",
+        inject: false,
         hash: true
         //console: "//cdnsapi.ztgame.com/site/js/console/main.js"
     }),
@@ -52,7 +53,7 @@ const outpath = DEV? (__dirname + '/_dist/'): "//192.168.12.132/common/xx2/act/z
 module.exports = {
   //devtool: 'inline-source-map',
   entry: {
-    main: "./app/app.js"
+    main: "./src/entry.js"
   },
   output: {
     path: outpath,
@@ -76,7 +77,7 @@ module.exports = {
             }
           }
         ],
-        include: /app/
+        include: /src/
       },
       { 
         test: /\.css$/,
@@ -104,7 +105,7 @@ module.exports = {
   },
   plugins: plugins,
   devServer: {
-      port: 6600,
+      port: parseInt(Math.random()*(9999-1000+1)+ 1000),
       /////在这里使用inline才会自动刷新
       ///--hot --inline 
       //inline: true,
