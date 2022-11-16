@@ -1,0 +1,47 @@
+{
+  "name": "@tencent/webpack-hippy-hot-middleware",
+  "version": "0.0.2",
+  "description": "hippy hot reloading you can attach to your own server",
+  "keywords": [
+    "webpack",
+    "hmr",
+    "hot",
+    "module",
+    "reloading",
+    "hot-reloading",
+    "middleware",
+    "express",
+    "hippy"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "prettier": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.woa.com:karaoke-web/webpack-hippy-hot-middleware.git"
+  },
+  "author": "fahui <fahuihuang@tencent.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "7.11.6",
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/preset-env": "7.11.5",
+    "chalk": "2.3.2",
+    "events": "^3.3.0",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "express": "^4.17.1",
+    "prettier": "^2.2.1",
+    "webpack": "^4.20.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "arrowParens": "always"
+  }
+}

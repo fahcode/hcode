@@ -1,0 +1,78 @@
+{
+  "name": "@tencent/babel-plugin-istanbul",
+  "version": "0.0.2",
+  "author": "karaoke_web",
+  "description": "A babel plugin that adds istanbul instrumentation to ES6 code",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.0.0",
+    "@istanbuljs/load-nyc-config": "1.0.0",
+    "@istanbuljs/schema": "0.1.2",
+    "istanbul-lib-coverage": "3.2.0",
+    "semver": "^6.3.0",
+    "test-exclude": "6.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/parser": "^7.14.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.5",
+    "@babel/register": "^7.7.4",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.9",
+    "cross-env": "^6.0.3",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0",
+    "pmock": "^0.2.3",
+    "standard": "^14.3.1",
+    "clone": "^2.1.2",
+    "debug": "^4.1.1",
+    "documentation": "^12.1.4",
+    "nopt": "^4.0.1",
+    "js-yaml": "^3.13.1"
+  },
+  "scripts": {
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "release": "babel src --out-dir lib",
+    "pretest": "standard && npm run release",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha --timeout 5000 test/*.js",
+    "prepublish": "npm test && npm run release"
+  },
+  "standard": {
+    "ignore": [
+      "fixtures/*.js",
+      "test/*.js",
+      "test/**/*.js",
+      "src/instrument/*.js",
+      "lib/*.js",
+      "lib/instrument/*.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.woa.com/karaoke-web/babel-plugin-istanbul.git"
+  },
+  "keywords": [
+    "istanbul",
+    "babel",
+    "plugin",
+    "instrumentation"
+  ],
+  "nyc": {
+    "include": [
+      "src/*.js",
+      "fixtures/should-cover.js"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
